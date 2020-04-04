@@ -1,0 +1,53 @@
+body{
+    background-color: cadetblue !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.title{
+    color: white;
+    font-family: customFont;
+}
+
+.title:hover{
+    color: cadetblue !important;
+}
+.title2{
+    color: white;
+}
+
+.title2:hover{
+    color: cadetblue !important;
+}
+
+
+.title1:hover{
+    color: cadetblue;
+}
+
+.title1{
+    color: white;
+    position: fixed;
+    top: 5px; 
+    cursor: pointer;
+    right: 7px;
+}
+.div{
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Non-prefixed version, currently
+                    supported by Chrome and Opera */
+}
+
+h2{
+    font-family: customFont;
+}
+
+p{ 
+    margin: 0 !important; 
+}

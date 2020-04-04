@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Corona Media</title>
+		
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	    <!-- jQuery library -->
+	    <script src="assets/js/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- Custom styles for this template -->
+        <link href="assets/css/styles.css" rel="stylesheet">
+        <style>      
+            @font-face
+            {
+                font-family: customFont;
+                src: url(assets/fonts/BebasNeue-Bold.ttf);
+            }
+        </style>
+  </head>
+
+  <body>
+    <header class="bg-dark text-center pt-1">
+        <h1><a href="index.html" class="title">Corona Media</a></h1>
+        <h1 class="float-right title1" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#9776;</h1>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="index.html">Home</a>
+            <a class="dropdown-item" href="videos.html">Videos</a>
+            <a class="dropdown-item" href="news.html">News</a>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-5 bg-dark text-center mr-3 ml-3 pt-2 rounded">
+                <h2 class="text-light">Featured Video</h2>
+                <iframe class="border border-light" width="90%" height="300px" src="https://www.youtube.com/embed/ykieEE1j9eA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p class="float-right mr-5"><a href="videos.html" class="title2">Watch More</a></p>
+            </div>
+
+            <div class="col-3 bg-dark text-center mr-3 ml-3 pt-2 rounded">
+                <h2 class="text-light">Feel Good News</h2>
+                <img src="assets/images/dc.jpeg" width="95%" class="border">
+                <p class="text-center text-light mt-2 mb-1">Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other first responders. Click here to find out more.</p>
+                <a target="_blank" href="https://www.gofundme.com/f/shields-for-heroes" class="title2">Learn More</a>
+                <br>
+                <a href="news.html" class="title2">More Feel Good News</a>
+            </div>
+
+            <div class="col-3 bg-dark text-center mr-3 ml-3 pt-2 rounded div" onclick="generate()">
+                <h2 class="text-light">Activities</h2>
+                <div class="border p-3">
+                    <h6 class="text-light">Click To Generate Random Activity</h6>
+                    <h3 class="text-center text-light mt-5" id="text"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generate() {
+
+        var words = ['Read', 'Play Video Games', 'Call A Friend', 'Text A Friend', 'Listen To Music', 'Learn A Musical Instrument', 'Watch Youtube', 'Watch A Movie Or TV Show', 'Play A Board Or Card Game', 'Read The News', 'Learn A New Language', 'Do Extra Chores', 'Learn To Code', 'Take An Online Course', 'Write A Story', 'Make A Journal Or Diary',];
+        var number = Math.floor(Math.random() * words.length);
+        var word = words[number];
+        document.getElementById("text").innerHTML = word;
+
+        }
+
+    </script>
+  </body>
+</html>
