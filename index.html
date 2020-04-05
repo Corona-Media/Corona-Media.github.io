@@ -77,7 +77,11 @@
     <script>
         function generate() {
 
-        var words = ['Read', 'Play Video Games', 'Call A Friend', 'Text A Friend', 'Listen To Music', 'Learn A Musical Instrument', 'Watch Youtube', 'Watch A Movie Or TV Show', 'Play A Board Or Card Game', 'Read The News', 'Learn A New Language', 'Do Extra Chores', 'Learn To Code', 'Take An Online Course', 'Write A Story', 'Make A Journal Or Diary',];
+        var words = ['Read', 'Play Video Games', 'Call A Friend', 'Text A Friend', 'Listen To Music', 
+                    'Learn A Musical Instrument', 'Watch Youtube', 'Watch A Movie Or TV Show',
+                    'Play A Board Or Card Game', 'Read The News', 'Learn A New Language', 'Do Extra Chores',
+                    'Learn To Code', 'Take An Online Course', 'Write A Story', 'Make A Journal Or Diary'];
+                    
         var number = Math.floor(Math.random() * words.length);
         var word = words[number];
         document.getElementById("text").innerHTML = word;
