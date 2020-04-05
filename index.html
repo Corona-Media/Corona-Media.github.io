@@ -30,39 +30,46 @@
   </head>
 
   <body>
-    <header class="bg-dark text-center pt-1">
+    <header class="bg-dark text-center pt-1" style="position:fixed; top:0; width: 100%; z-index: 1;">
         <h1><a href="index.html" class="title">Corona Media</a></h1>
-        <h1 class="float-right title1" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#9776;</h1>
+        <h1 class="title1" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#9776;</h1>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="index.html">Home</a>
             <a class="dropdown-item" href="videos.html">Videos</a>
             <a class="dropdown-item" href="news.html">News</a>
         </div>
     </header>
-
+    <br><br>
     <div class="container-fluid">
-        <div class="row mt-5">
-            <div class="col-5 bg-dark text-center mr-3 ml-3 pt-2 rounded">
-                <h2 class="text-light">Featured Video</h2>
-                <iframe class="border border-light" width="90%" height="300px" src="https://www.youtube.com/embed/ykieEE1j9eA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p class="float-right mr-5"><a href="videos.html" class="title2">Watch More</a></p>
+        <div class="row mt-4 mar">
+            <div class="card bg-dark pt-2 rounded mx-auto mt-5 mb-3"  style="width: 600px; height: 400px;">
+                <center>
+                    <h2 class="text-light">Featured Video</h2>
+                    <iframe width="90%" height="300px" src="https://www.youtube.com/embed/ykieEE1j9eA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="text-center mt-1"><a href="videos.html" class="title2">Watch More</a></p>
+                </center>
             </div>
 
-            <div class="col-3 bg-dark text-center mr-3 ml-3 pt-2 rounded">
+            <div class="card bg-dark mr-3 ml-3 pt-2 mt-5 mb-3 rounded div mx-auto" onclick="generate()" style="width: 500px; height: 400px;">
+                <center>
+                    <h2 class="text-light">Activities</h2>
+                    <div class="p-3 mb-3" style="width: 90%; height: 300px;">
+                        <h6 class="text-light">Click To Generate Random Activity</h6>
+                        <br>
+                        <h3 class="text-center text-light mt-5" id="text"></h3>
+                    </div>
+                </center>
+            </div>
+
+            <div class="card bg-dark pt-2 mt-5 mb-3 rounded mx-auto"  style="width: 500px; height: 500px;">
+                <center>
                 <h2 class="text-light">Feel Good News</h2>
-                <img src="assets/images/dc.jpeg" width="95%" class="border">
-                <p class="text-center text-light mt-2 mb-1">Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other first responders. Click here to find out more.</p>
+                <img src="assets/images/dc.jpeg" width="90%">
+                <p class="text-center text-light mt-2 mb-1" style="width: 90%;">Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other first responders. Click here to find out more.</p>
                 <a target="_blank" href="https://www.gofundme.com/f/shields-for-heroes" class="title2">Learn More</a>
                 <br>
                 <a href="news.html" class="title2">More Feel Good News</a>
-            </div>
-
-            <div class="col-3 bg-dark text-center mr-3 ml-3 pt-2 rounded div" onclick="generate()">
-                <h2 class="text-light">Activities</h2>
-                <div class="border p-3">
-                    <h6 class="text-light">Click To Generate Random Activity</h6>
-                    <h3 class="text-center text-light mt-5" id="text"></h3>
-                </div>
+                </center>
             </div>
         </div>
     </div>
