@@ -50,14 +50,17 @@
                 </center>
             </div>
 
-            <div class="card bg-dark mr-3 ml-3 pt-2 mt-5 mb-3 rounded div mx-auto" onclick="generate()" style="width: 500px; height: 400px;">
+            <div class="card bg-dark mr-3 ml-3 pt-2 mt-5 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                 <center>
                     <h2 class="text-light">Activities</h2>
-                    <div class="p-3 mb-3" style="width: 90%; height: 300px;">
+                    <div class="p-3 mb-3" style="width: 90%; height: 300px;" onclick="generate()">
                         <h6 class="text-light">Click To Generate Random Activity</h6>
                         <br>
                         <h3 class="text-center text-light mt-5" id="text"></h3>
+                        <br>
+                        <br>
                     </div>
+                    <a id="link" target="_blank" class="title2"></a>
                 </center>
             </div>
 
@@ -76,16 +79,34 @@
 
     <script>
         function generate() {
-
+        
+        //Create array of ideas and links
         var words = ['Read', 'Play Video Games', 'Call A Friend', 'Text A Friend', 'Listen To Music', 
                     'Learn A Musical Instrument', 'Watch Youtube', 'Watch A Movie Or TV Show',
                     'Play A Board Or Card Game', 'Read The News', 'Learn A New Language', 'Do Extra Chores',
                     'Learn To Code', 'Take An Online Course', 'Write A Story', 'Make A Journal Or Diary'];
+            
+        var links = [null, null, null, null, 'https://www.spotify.com/us/', 
+                    null, 'https://www.youtube.com/', 'https://www.netflix.com/',
+                    'https://www.gearhungry.com/best-family-board-games/', 'https://news.google.com/', 'https://www.duolingo.com/', null,
+                    'https://www.khanacademy.org/computing/computer-programming', 'https://www.edx.org/', null, null];
                     
+        //Set link text to "Learn More"
+        document.getElementById("link").innerHTML = "I want to try this.";
+            
+        //Set text to random idea and set link to correct url
         var number = Math.floor(Math.random() * words.length);
+            
         var word = words[number];
         document.getElementById("text").innerHTML = word;
-
+            
+        var link = links[number];
+            if (link != null) {
+                document.getElementById("link").href = link;
+            } else {
+                document.getElementById("link").removeAttribute("href");
+                document.getElementById("link").innerHTML = "";
+            }
         }
 
     </script>
