@@ -1,28 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Videos</title>
-
-    <style>   
-        body{
-            background-color: cadetblue !important;
-        }
-        .title{
-            color: white;
-        }
-        a{
-            text-decoration: none !important;
-        }
-    </style>
+        <title>Feedback</title>
 		
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-		<!-- jQuery library -->
-		<script src="assets/js/jquery.min.js"></script>
+	    <!-- jQuery library -->
+	    <script src="assets/js/jquery.min.js"></script>
 
 		<!-- Popper JS -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -32,7 +20,6 @@
 
         <!-- Custom styles for this template -->
         <link href="assets/css/styles.css" rel="stylesheet">
-
         <style>      
             @font-face
             {
@@ -54,16 +41,26 @@
         </div>
     </header>
     <br><br>
-    <div class="container-fluid">
-        <div class="row mar">
-            <div class="card bg-dark text-center mr-3 ml-3 rounded mt-5 p-3 mx-auto" style="width: 500px;">
-                <center>
-                    <img src="assets/images/dc.jpeg" width="100%">
-                    <p class="text-center text-light mt-2" style="width: 100%;">Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other first responders. Click here to find out more.</p>
-                    <a target="_blank" href="https://www.gofundme.com/f/shields-for-heroes" class="title2">Learn More</a>
-                </center>
-            </div>
-        </div>
-    </div>
+    <br><br>
+    <center>
+        <p>Let us know here is you have any suggestions or feedback on this site. 
+        If you have any good videos or feel good news please tell us here too.</p><br>
+            <form action="https://ilan-not-elon.com/Corona-Media/feedback.php" method="POST">
+                <input id="input" type="text" name="message"></input>
+                <button style="border: none" onsubmit="submit()">Submit</button>
+            </form>
+    </center>
+    
+    <script>
+        function submit() {
+            //this is not called after php redirect
+            
+            //alert success
+            alert("Thank you for your feedback");
+            
+            //reset value
+            document.getElementById("input").value = "";
+        }
+    </script>
   </body>
 </html>
