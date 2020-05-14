@@ -64,6 +64,29 @@
                     <a id="link" target="_blank" class="title2"></a>
                 </center>
             </div>
+            
+            <div class="card bg-dark mr-3 ml-3 mt-5 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
+                <center>
+                    <h2 class="text-light">Info</h2>
+                    <br>
+                    <h4 id="total" class="text-light"></h4>
+                    <br>
+                    <h4 class="text-light"></h4>
+                    <br>
+                    <h4 class="text-light"></h4>
+                    <br>
+                    <h4 class="text-light"></h4>
+                    <br>
+                    <h4 class="text-light"></h4>
+                    <br>
+                    <h4 class="text-light"></h4>
+                    <br>
+                    <h4 class="text-light"></h4>
+                    <br>
+                    <br>
+                    <a href="https://www.cdc.gov/coronavirus" target="_blank"><h4 class="text-light title2">Click Here To Learn More</h4></a>
+                </center> 
+            </div>
 
             <div class="card bg-dark pt-2 mt-5 mb-3 rounded mx-auto"  style="width: 500px; height: 500px;">
                 <center>
@@ -85,12 +108,12 @@
         var words = ['Read', 'Play Video Games', 'Call A Friend', 'Text A Friend', 'Listen To Music', 
                     'Learn A Musical Instrument', 'Watch Youtube', 'Watch A Movie Or TV Show',
                     'Play A Board Or Card Game', 'Read The News', 'Learn A New Language', 'Do Extra Chores',
-                    'Learn To Code', 'Take An Online Course', 'Write A Story', 'Make A Journal Or Diary'];
+                    'Learn To Code', 'Take An Online Course', 'Write A Story', 'Make A Journal Or Diary', 'Build a pillow fort', 'Build a cardboard box fort', 'Go on a bike ride, run, or walk'];
             
         var links = [null, null, null, null, 'https://www.spotify.com/us/', 
                     null, 'https://www.youtube.com/', 'https://www.netflix.com/',
                     'https://www.gearhungry.com/best-family-board-games/', 'https://news.google.com/', 'https://www.duolingo.com/', null,
-                    'https://www.khanacademy.org/computing/computer-programming', 'https://www.edx.org/', null, null];
+                    'https://www.khanacademy.org/computing/computer-programming', 'https://www.edx.org/', null, null, null, null, null];
                     
         //Set link text to "Learn More"
         document.getElementById("link").innerHTML = "I want to try this.";
@@ -109,7 +132,18 @@
                 document.getElementById("link").innerHTML = "";
             }
         }
+        
+        
+        var settings = {
+          "url": "https://api.covid19api.com/world/total",
+          "method": "GET",
+          "timeout": 0,
+        };
 
+        $.ajax(settings).done(function (response) {
+            console.log(response.TotalRecovered);
+            $("#total").text(response.TotalRecovered + " people have recovered from coronavirus.");
+        });
     </script>
   </body>
 </html>
