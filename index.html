@@ -67,24 +67,12 @@
             
             <div class="card bg-dark mr-3 ml-3 mt-5 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                 <center>
-                    <h2 class="text-light">Info</h2>
-                    <br>
+                    <h2 class="text-light mb-4">Info</h2>
                     <h4 id="total" class="text-light"></h4>
                     <br>
-                    <h4 class="text-light"></h4>
+                    <img src="assets/images/corona.png" height="200px" alt="corona image" class="mb-3">
                     <br>
-                    <h4 class="text-light"></h4>
-                    <br>
-                    <h4 class="text-light"></h4>
-                    <br>
-                    <h4 class="text-light"></h4>
-                    <br>
-                    <h4 class="text-light"></h4>
-                    <br>
-                    <h4 class="text-light"></h4>
-                    <br>
-                    <br>
-                    <a href="https://coronavirus.jhu.edu/" target="_blank"><h4 class="text-light title2">Click Here To Learn More</h4></a>
+                    <a href="https://coronavirus.jhu.edu/" target="_blank" class="text-light title2">Click Here To Learn More</a>
                 </center> 
             </div>
 
@@ -141,7 +129,6 @@
         };
 
         $.ajax(settings).done(function (response) {
-            console.log(response.TotalRecovered);
             $("#total").text(response.TotalRecovered + " people have recovered from coronavirus.");
         });
     </script>
