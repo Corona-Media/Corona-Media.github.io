@@ -1,51 +1,17 @@
-<!doctype html>
-<html lang="en">
+<html>
   <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Corona Media</title>
-		
-	    <!-- Latest compiled and minified CSS -->
-	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-	    <!-- jQuery library -->
-	    <script src="assets/js/jquery.min.js"></script>
-
-		<!-- Popper JS -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-		<!-- Latest compiled JavaScript -->
-		<script src="assets/js/bootstrap.min.js"></script>
-
-        <!-- Custom styles for this template -->
-        <link href="assets/css/styles.css" rel="stylesheet">
-        <style>      
-            @font-face
-            {
-                font-family: customFont;
-                src: url(assets/fonts/BebasNeue-Bold.ttf);
-            }
-        </style>
+        <title>Covid Kids</title>
+        <script type="text/javascript" src="assets/includes/head.js"></script>   
   </head>
 
-  <body>
-    <header class="bg-dark text-center pt-1" style="position:fixed; top:0; width: 100%; z-index: 1;">
-        <h1><a href="index.html" class="title">Corona Media</a></h1>
-        <h1 class="title1" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#9776;</h1>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="index.html">Home</a>
-            <a class="dropdown-item" href="videos.html">Videos</a>
-            <a class="dropdown-item" href="news.html">News</a>
-            <a class="dropdown-item" href="feedback.html">Feedback</a>
-        </div>
-    </header>
+  <body onload="start()">
+    <script type="text/javascript" src="assets/includes/header.js"></script>
     <br><br>
     <div class="container-fluid">
         <div class="row mt-4 mar">
             <div class="card bg-dark pt-2 rounded mx-auto mt-5 mb-3"  style="width: 600px; height: 400px;">
                 <center>
-                    <h2 class="text-light">Featured Video</h2>
+                    <h2 class="text-light">Featured Funny Video</h2>
                     <iframe width="90%" height="300px" src="https://www.youtube.com/embed/ykieEE1j9eA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p class="text-center mt-1"><a href="videos.html" class="title2">Watch More</a></p>
                 </center>
@@ -75,6 +41,14 @@
                     <a href="https://coronavirus.jhu.edu/" target="_blank" class="text-light title2">Click Here To Learn More</a>
                 </center> 
             </div>
+            
+            <div class="card bg-dark pt-2 rounded mx-auto mt-5 mb-3"  style="width: 600px; height: 400px;">
+                <center>
+                    <h2 class="text-light">Featured Happy Video</h2>
+                    <iframe width="90%" height="300px" src="https://www.youtube.com/embed/cqvVL8IurMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="text-center mt-1"><a href="videos.html" class="title2">Watch More</a></p>
+                </center>
+            </div>
 
             <div class="card bg-dark pt-2 mt-5 mb-3 rounded mx-auto"  style="width: 500px; height: 500px;">
                 <center>
@@ -86,42 +60,23 @@
                 <a href="news.html" class="title2">More Feel Good News</a>
                 </center>
             </div>
+            
+            <div class="card bg-dark mr-3 ml-3 mt-5 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
+                <center>
+                    <h2 class="text-light mb-4">Recent Changes</h2>
+                    <p class="text-light">5/15 -- Beta Launch</p>
+                </center> 
+            </div>
         </div>
     </div>
+    
+    <footer class="footer bg-dark p-3 mt-5">
+      <div class="container">
+        <span class="text-light">Beta Version 0.1</span>
+      </div>
+    </footer>
       
-    <script>
-        function generate() {
-        
-        //Create array of ideas and links
-        var words = ['Read', 'Play Video Games', 'Call A Friend', 'Text A Friend', 'Listen To Music', 
-                    'Learn A Musical Instrument', 'Watch Youtube', 'Watch A Movie Or TV Show',
-                    'Play A Board Or Card Game', 'Read The News', 'Learn A New Language', 'Do Extra Chores',
-                    'Learn To Code', 'Take An Online Course', 'Write A Story', 'Make A Journal Or Diary', 'Build a pillow fort', 'Build a cardboard box fort', 'Go on a bike ride, run, or walk'];
-            
-        var links = [null, null, null, null, 'https://www.spotify.com/us/', 
-                    null, 'https://www.youtube.com/', 'https://www.netflix.com/',
-                    'https://www.gearhungry.com/best-family-board-games/', 'https://news.google.com/', 'https://www.duolingo.com/', null,
-                    'https://www.khanacademy.org/computing/computer-programming', 'https://www.edx.org/', null, null, null, null, null];
-                    
-        //Set link text to "Learn More"
-        document.getElementById("link").innerHTML = "I want to try this.";
-            
-        //Set text to random idea and set link to correct url
-        var number = Math.floor(Math.random() * words.length);
-            
-        var word = words[number];
-        document.getElementById("text").innerHTML = word;
-            
-        var link = links[number];
-            if (link != null) {
-                document.getElementById("link").href = link;
-            } else {
-                document.getElementById("link").removeAttribute("href");
-                document.getElementById("link").innerHTML = "";
-            }
-        }
-        
-        
+    <script> 
         var settings = {
           "url": "https://api.covid19api.com/world/total",
           "method": "GET",
@@ -129,8 +84,10 @@
         };
 
         $.ajax(settings).done(function (response) {
-            $("#total").text(response.TotalRecovered + " people have recovered from coronavirus.");
+            $("#total").text(response.TotalRecovered + " people have recovered from Covid-19.");
         });
     </script>
+      
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

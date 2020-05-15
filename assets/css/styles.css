@@ -67,4 +67,14 @@ h3{
 
 #input{
     width: 50vw;
+    height: 80px;
+}
+
+.submitbtn{
+   background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: none;
+    font-size: 20px;
+    font-family: customFont;
 }
