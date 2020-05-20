@@ -81,3 +81,9 @@ h3{
         height: 105vw !important;
     }
 }
+
+@media (min-width : 460px) {
+    .nonmobilemargin{
+        margin-bottom: 35px !important;
+    }
+}
