@@ -5,6 +5,8 @@
  document.write("<a class='dropdown-item' href='index.html'>Home</a>");
  document.write("<a class='dropdown-item' href='videos.html'>Videos</a>");
  document.write("<a class='dropdown-item' href='news.html'>News</a>");
+ document.write("<a class='dropdown-item' href='artwork.html'>Artwork</a>");
+ //document.write("<a class='dropdown-item' href='games.html'>Games</a>");
  document.write("<a class='dropdown-item' href='feedback.html'>Feedback</a>");
  document.write("</div>");
  document.write("</header>");

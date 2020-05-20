@@ -1,6 +1,6 @@
 document.write("<link rel='stylesheet' href='assets/css/bootstrap.min.css'>");
 document.write("<script src='assets/js/jquery.min.js'></script>");
-document.write("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>");
+document.write("<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>");
 document.write("<script src='assets/js/bootstrap.min.js'></script>");
 document.write("<link href='assets/css/styles.css' rel='stylesheet'>");
 document.write("<meta charset='utf-8'>");
