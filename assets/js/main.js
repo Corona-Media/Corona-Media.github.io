@@ -31,7 +31,7 @@ function artwork() {
         
         var addTo1 = document.getElementById("art");
         var newContent1 = document.createElement('div');
-        newContent1.className = "card bg-dark pt-2 mt-5 mb-3 rounded mx-auto";
+        newContent1.className = "card bg-dark pt-2 mt-5 mb-3 rounded mx-auto mobile";
         newContent1.style = "width: 400px; height: 530px;";
         newContent1.setAttribute("onclick", "popup(this)");
         newContent1.setAttribute("id", String(x1));

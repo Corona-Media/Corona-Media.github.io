@@ -69,3 +69,15 @@ h3{
     width: 50vw;
     height: 80px;
 }
+
+@media (max-width : 475px) {
+    .mobile{
+        height: 110vw !important;
+    }
+}
+
+@media (max-width : 360px) {
+    .mobile{
+        height: 105vw !important;
+    }
+}
