@@ -13,7 +13,7 @@ document.write("font-family: customFont;");
 document.write("src: url(assets/fonts/BebasNeue-Bold.ttf);");
 document.write("}");
 document.write("</style>");
-document.write("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-166774293-1'</script>");
+document.write("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-166774293-1'></script>");
 document.write("<script>");
 document.write("window.dataLayer = window.dataLayer || [];");
 document.write("function gtag(){dataLayer.push(arguments);}");
