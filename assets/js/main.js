@@ -12,7 +12,7 @@ var videos = ["https://www.youtube-nocookie.com/embed/ykieEE1j9eA",
                   "https://www.youtube-nocookie.com/embed/xGKFVMgjrPc",
                   "https://www.youtube-nocookie.com/embed/cqvVL8IurMw"
                  ];
-function videos() {
+function videosfunc() {
 
     for (var x = 0; x < videos.length; x += 1) {
         var div = "<center>" + "<iframe class='card-body' width='100%' height='300px' src='" + videos[x] + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" + "</center>";
