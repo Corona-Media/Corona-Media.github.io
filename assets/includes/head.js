@@ -20,3 +20,4 @@ document.write("function gtag(){dataLayer.push(arguments);}");
 document.write("gtag('js', new Date());");
 document.write("gtag('config', 'UA-166774293-1');");
 document.write("</script>");
+document.write("<meta name='google-site-verification' content='Qc2AwkweVSkqV5KKVlSXa5-gK3FY9kv4KhnYiGgbYbE'>");
