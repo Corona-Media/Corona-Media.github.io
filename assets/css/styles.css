@@ -95,3 +95,7 @@ h3{
    -ms-user-select: none;
    user-select: none;
 }
+
+.maintitle{
+    margin-top: 5px;
+}
