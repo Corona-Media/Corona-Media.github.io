@@ -30,10 +30,11 @@ a{
 .title1{
     color: white;
     cursor: pointer;
-    top: 6px;
+    top: 9px;
     position: fixed;
     right: 10px;
     font-size: 30pt;
+    font-family: "Lucida Sans Unicode", "Ariel Unicode";
 }
 
 .titleclass{
