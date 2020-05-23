@@ -29,11 +29,16 @@ a{
 
 .title1{
     color: white;
-    position: fixed;
-    top: 5px; 
     cursor: pointer;
-    right: 7px;
+    top: 6px;
+    position: fixed;
+    right: 10px;
 }
+
+.titleclass{
+    margin-top: 10px
+}
+
 .div{
 -webkit-touch-callout: none; /* iOS Safari */
 -webkit-user-select: none; /* Safari */
