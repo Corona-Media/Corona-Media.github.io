@@ -33,10 +33,12 @@ a{
     top: 6px;
     position: fixed;
     right: 10px;
+    font-size: 30pt;
 }
 
 .titleclass{
-    margin-top: 10px
+    margin-top: 10px;
+    font-size: 30pt;
 }
 
 .div{
