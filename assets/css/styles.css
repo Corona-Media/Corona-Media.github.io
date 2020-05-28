@@ -73,7 +73,7 @@ h3{
     font-family: customFont;
 }
 
-#input{
+.input1{
     width: 50vw;
     height: 80px;
 }
@@ -102,4 +102,15 @@ h3{
    -webkit-user-select: none;
    -ms-user-select: none;
    user-select: none;
+}
+
+.input2{
+    width: 90%;
+    height: 100px;
+}
+
+@media (max-width : 700px) {
+    .fontchange{
+        font-size: 2.5vw;
+    }
 }

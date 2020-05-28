@@ -38,11 +38,26 @@ var words = [{name: "Read", link: null},
              {name: "Build A Pillow Fort", link: null},
              {name: "Build A Cardboard Box Fort", link: 'https://handsonaswegrow.com/build-fun-cardboard-fort/'},
              {name: "Go On A Bike Ride, Run, Or Walk", link: null},
+             {name: "Start  A Garden", link: null},
+             {name: "Do A Puzzle", link: null},
+             {name: "Organize Your Books By Color", link: null},
+             {name: "Bake", link: null},
+             {name: "Cook", link: null},
+             {name: "Draw Or Color", link: null},
+             {name: "Make A Collage With Scraps Of Paper", link: null},
+             {name: "Start A Vlog Or Blog About Your Time Stuck At Home", link: null},
+             {name: "Write A Song", link: null},
+             {name: "Make Something Out Of Clay", link: null},
              ];
 
 //Home Page Videos
 var funnyvid = videos[0];
 var happyvid = videos[6];
+
+//Article Variables
+var articles = [{image: "assets/images/dc.jpeg", description: "Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other first responders. At the time of writing this they already have ditributed 6,500 shields to hospital workers.", link: "assets/articles/discover-camp.html"}
+    
+               ];
 
 
 
@@ -51,6 +66,11 @@ var happyvid = videos[6];
 //Start Function 
 function start() {
     console.log("This is a work in progress. Please suggest any improvements on the feedback page https://corona-media.github.io/feedback.html");
+    
+    //popup for feedback
+    setTimeout(function() {
+        $("#feedbackpopup").modal('show')
+    }, 60000);
 }
 
 
