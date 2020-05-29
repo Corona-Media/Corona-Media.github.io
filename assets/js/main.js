@@ -62,7 +62,6 @@ var articles = [{image: "assets/images/dc.jpeg", description: "Discover Camp in 
 
 
 
-
 //Start Function 
 function start() {
     console.log("This is a work in progress. Please suggest any improvements on the feedback page https://corona-media.github.io/feedback.html");
@@ -145,6 +144,13 @@ function popup(thus) {
 }
 
 
+//Show Index Popup
+function popupindex() {
+    var modalnum = "#model00"
+    $(modalnum).modal('show');
+}
+
+
 //Ideas Gen code
 function ideasfunc(document) {
 
@@ -163,5 +169,19 @@ var link = words[number].link;
     } else {
         document.getElementById("link").removeAttribute("href");
         document.getElementById("link").innerHTML = "";
+    }
+}
+
+
+//Articles Code
+function articlesfunc(document) {
+    for (var x = 0; x < articles.length; x += 1) {
+        var div = "<span>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;'>" + "<span class='ml-2 mr-2 mb-4' style='display: block'>" + "<p class='fontchange'>" + articles[x].description + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2'>Read More</a>" + "</span>" + "</span>";
+        var addTo = document.getElementById("articles");
+        var newContent = document.createElement('div');
+        newContent.className = "card bg-dark pt-2 mt-3 mb-3 rounded mx-auto text-light";
+        newContent.style = "width: 95%; height: 135px;";
+        newContent.innerHTML = div;
+        addTo.appendChild(newContent);
     }
 }
