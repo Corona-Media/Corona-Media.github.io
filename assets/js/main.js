@@ -175,7 +175,7 @@ var link = words[number].link;
 
 //Articles Code
 function articlesfunc(document) {
-    for (var x = 0; x < articles.length; x += 1) {
+    for (var x = articles.length - 1; x >= 0; x -= 1) {
         var div = "<span>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;'>" + "<span class='ml-2 mr-2 mb-4' style='display: block'>" + "<p class='fontchange'>" + articles[x].description + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2'>Read More</a>" + "</span>" + "</span>";
         var addTo = document.getElementById("articles");
         var newContent = document.createElement('div');

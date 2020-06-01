@@ -1,4 +1,4 @@
-document.write("<header class='bg-dark text-center' style='position:fixed; top:0; width: 100%; z-index: 1;'>");
+document.write("<header class='bg-dark text-center p-1 martop' style='position:fixed; top:0; width: 100%; z-index: 1;'>");
 document.write("<h1 class='titleclass'><a href='index.html' class='title'>Covid Kids</a></h1>");
 document.write("<h1 class='title1 unselectable' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><svg class='bi bi-three-dots-vertical' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z'></svg></h1>");
 document.write("<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>");

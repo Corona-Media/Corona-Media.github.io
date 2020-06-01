@@ -30,7 +30,7 @@ a{
 .title1{
     color: white;
     cursor: pointer;
-    top: 13px;
+    top: 11px;
     position: fixed;
     right: 10px;
     font-size: 27pt;
@@ -38,8 +38,7 @@ a{
 }
 
 .titleclass{
-    margin-top: 10px;
-    font-size: 30pt;
+    height: 1em;
 }
 
 .div{
