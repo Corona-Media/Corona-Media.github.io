@@ -55,7 +55,8 @@ var funnyvid = videos[0];
 var happyvid = videos[6];
 
 //Article Variables
-var articles = [{image: "assets/images/dc.jpeg", description: "Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other frontline workers. At the time of writing this they already have ditributed 6,500 shields to hospital workers.", link: "assets/articles/discover-camp.html"}
+var articles = [{image: "assets/images/dc.jpeg", description: "Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other frontline workers. At the time of writing this they already have ditributed 6,500 shields to hospital workers.", link: "assets/articles/discover-camp.html"},
+                {image: "assets/images/book-list.jpg", description: "Here are some great book suggestions from kids for kids. Hope you enjoy!", link: "assets/articles/book-list.html"}
     
                ];
 
