@@ -133,3 +133,15 @@ textarea:focus{
     outline:0;
     box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
 }
+
+.mobile-article-mar{
+    margin-right: 35%;
+    margin-left: 35%;
+}
+
+@media (max-width : 1000px) {
+    .mobile-article-mar{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
