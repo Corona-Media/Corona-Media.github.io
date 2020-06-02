@@ -20,7 +20,7 @@ var artwork = [{by: "Isabelle", files: ["assets/artwork/0/0.jpg",
               ];
 
 //Idea Variables
-var words = [{name: "Read", link: null},
+var words = [{name: "Read A Book", link: 'corona-media.github.io/assets/articles/book-list.html'},
              {name: "Play Video Games", link: 'https://www.epicgames.com/store'},
              {name: "Call Or Text A Friend", link: null},
              {name: "Listen To Music", link: 'https://www.spotify.com/us/'},
