@@ -36,4 +36,8 @@
 	<loc>https://corona-media.github.io/assets/articles/book-list.html</loc>
 	<priority>0.3</priority>
 </url>
+<url>
+	<loc>https://corona-media.github.io/assets/articles/activities-list.html</loc>
+	<priority>0.3</priority>
+</url>
 </urlset>
