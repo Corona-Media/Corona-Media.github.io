@@ -48,6 +48,8 @@ var words = [{name: "Read A Book", link: 'corona-media.github.io/assets/articles
              {name: "Start A Vlog Or Blog About Your Time Stuck At Home", link: null},
              {name: "Write A Song", link: null},
              {name: "Make Something Out Of Clay", link: null},
+             {name: "Listen To A Podcast", link: null},
+             {name: "Paint A Picture", link: null},
              ];
 
 //Home Page Videos
@@ -55,9 +57,9 @@ var funnyvid = videos[0];
 var happyvid = videos[6];
 
 //Article Variables
-var articles = [{image: "assets/images/dc.jpeg", description: "Discover Camp in Hawthorne New York is using their spare 3D printers to make shields for nurses, doctors, and other frontline workers. At the time of writing this they already have ditributed 6,500 shields to hospital workers.", link: "assets/articles/discover-camp.html"},
-                {image: "assets/images/book-list.jpg", description: "Here are some great book suggestions from kids for kids. Hope you enjoy!", link: "assets/articles/book-list.html"}
-    
+var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is Making 3D Printed Face Shields For Frontline Workers"},
+                {image: "assets/images/book-list.jpg", description: "20+ Great Books For Kids To Read While Stuck At Home", link: "assets/articles/book-list.html"},
+                {image: "assets/images/puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"}
                ];
 
 
