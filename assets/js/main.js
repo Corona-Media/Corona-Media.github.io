@@ -124,7 +124,7 @@ function artworkfunc(document) {
             images.push("<img src='" + artwork[x1].files[x2] + "'width='90%;'>")
         }
         
-        var modalele = "<div class='modal-dialog' role='document'>" + " <div class='modal-content'>" + "<div class='modal-header'>" + "<h5 class='modal-title' id='" + "model" + String(x1) + "Label" + "'>Artwork By " + artwork[x1].by + "</h5>" + "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" + "<span aria-hidden='true'>&times;</span>" + " </button>" + "</div>" + "<div class='modal-body'>" + "<center>" + images.toString() + "</center>" + "</div>" + "<div class='modal-footer'>" + "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>" + "</div>" + "</div>" + "</div>" + "</div>";
+        var modalele = "<div class='modal-dialog' role='document'>" + " <div class='modal-content'>" + "<div class='modal-header'>" + "<h5 class='modal-title' id='" + "model" + String(x1) + "Label" + "'>Artwork By " + artwork[x1].by + "</h5>" + "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" + "<span aria-hidden='true'>&times;</span>" + " </button>" + "</div>" + "<div class='modal-body'>" + "<center>" + images.toString() + "</center>" + "</div>" + "<div class='modal-footer'>" + "<button type='button' class='btn btn-dark' data-dismiss='modal'>Close</button>" + "</div>" + "</div>" + "</div>" + "</div>";
         
         var addToModal = document.getElementById("modals");
         var newContentModal = document.createElement("div");

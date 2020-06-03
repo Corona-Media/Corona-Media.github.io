@@ -69,10 +69,6 @@ h3{
     margin-right: 20px;
 }
 
-#total{
-    font-family: customFont;
-}
-
 @media (max-width : 475px) {
     .mobile{
         height: 110vw !important;

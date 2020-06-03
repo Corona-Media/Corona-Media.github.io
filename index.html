@@ -10,7 +10,7 @@
       <link rel="canonical" href="index.html">
   </head>
 
-  <body onload="start()">
+  <body onload="start();">
     <script type="text/javascript" src="assets/includes/header.js"></script>
     <br><br>
     <div class="container-fluid">
@@ -19,7 +19,7 @@
                 <center>
                     <h2 class="text-light">Featured Funny Video</h2>
                     <iframe title="funny video" id="funnyvid" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"></iframe>
-                    <p class="text-center mt-1"><a href="videos.html" class="title2">Watch More</a></p>
+                    <p class="text-center mt-2"><a href="videos.html" class="title2">Watch More</a></p>
                 </center>
             </div>
 
@@ -40,9 +40,9 @@
             <div class="card bg-dark mr-3 ml-3 mt-5 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                 <center>
                     <h2 class="text-light mb-4">Info</h2>
-                    <h4 id="total" class="text-light ml-2 mr-2"></h4>
+                    <h6 id="total" class="text-light ml-2 mr-2"></h6>
                     <br>
-                    <img src="assets/images/corona.png" height="200px" alt="corona image" class="mb-1 nonmobilemargin">
+                    <img src="assets/images/corona.png" height="200px" alt="corona image" class="mb-1 nonmobilemargin" style="image-rendering: pixelated;">
                     <br>
                     <a href="https://coronavirus.jhu.edu/" target="_blank" class="title2">Click Here To Learn More</a>
                 </center> 
@@ -52,7 +52,7 @@
                 <center>
                     <h2 class="text-light">Featured Happy Video</h2>
                     <iframe title="happy video" id="happyvid" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
-                    <p class="text-center mt-1"><a href="videos.html" class="title2">Watch More</a></p>
+                    <p class="text-center mt-2"><a href="videos.html" class="title2">Watch More</a></p>
                 </center>
             </div>
             
@@ -60,7 +60,7 @@
                 <center>
                     <h2 class="text-light">Articles</h2>
                     <br>
-                    <ul class="text-light" id="articleslist">
+                    <ul class="text-light text-left" id="articleslist">
                         <li><a class="title2" href="assets/articles/discover-camp.html" target="_blank">Summer Camp Making 3D Printed Face Shields For Essential Workers.</a></li>
                         <li><a class="title2" href="assets/articles/book-list.html" target="_blank">20+ Great Books For Kids To Read While Stuck At Home</a></li>
                         <li><a class="title2" href="assets/articles/activities-list.html" target="_blank">30+ Activities to keep you busy while bored at home</a></li>
@@ -87,7 +87,7 @@
     
     <footer class="footer bg-dark p-3 mt-5">
       <div class="container">
-        <span class="text-light">Beta Version 0.37</span>
+        <span class="text-light">Beta Version 0.47</span>
       </div>
     </footer>
       
@@ -99,7 +99,7 @@
         };
 
         $.ajax(settings).done(function (response) {
-            $("#total").text(response.TotalRecovered + " people have recovered from Covid-19.");
+            $("#total").text(response.TotalRecovered + " People Have Recovered From Covid-19.");
         });
     </script>
       
@@ -123,7 +123,7 @@
                         <img src="assets/artwork/0/4.jpg" width="90%;" alt="artwork4">,
                         <img src="assets/artwork/0/5.jpg" width="90%;" alt="artwork5">
                     </center></div><div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
