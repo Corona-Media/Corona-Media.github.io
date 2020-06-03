@@ -1,4 +1,5 @@
-<html>
+< !DOCTYPE html >
+<html lang="en">
   <head>
         <title>No Mobile Support</title>
         <script type="text/javascript" src="assets/includes/head.js"></script>   
@@ -17,5 +18,11 @@
         <br>
         <button class="btn btn-dark" onclick="window.location.href='covidkidsgame/index.html'">I'm On A Computer</button>
     </center>
+      
+      <amp-install-serviceworker
+            src="/sw.js"
+            data-iframe-src="https://amp.dev/serviceworker.html"
+            layout="nodisplay">
+        </amp-install-serviceworker>
   </body>
 </html>
