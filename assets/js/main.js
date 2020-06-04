@@ -109,7 +109,7 @@ happyvidid.setAttribute("height", "300px");
 function artworkfunc(document) {
 
     for (var x1 = 0; x1 < artwork.length; x1 += 1) {
-        var div = "<center>" + "<img id='img1' src='" + artwork[x1].files[0] + "' width='90%' data-toggle='tooltip' title='Artwork By " + artwork[x1].by + "'>" + "</center>"  
+        var div = "<center>" + "<img id='img1' src='" + artwork[x1].files[0] + "' width='90%' data-toggle='tooltip' title='Artwork By " + artwork[x1].by + "' alt='" + artwork[x1].by + "art'>" + "</center>"  
         var addTo = document.getElementById("art");
         var newContent = document.createElement('div');
         newContent.className = "card bg-dark pt-2 mt-5 mb-3 rounded mx-auto mobile";
@@ -122,7 +122,7 @@ function artworkfunc(document) {
         //create popup
         var images = [];
         for (var x2 = 0; x2 < artwork[x1].files.length; x2 += 1) {
-            images.push("<img src='" + artwork[x1].files[x2] + "'width='90%;'>")
+            images.push("<img src='" + artwork[x1].files[x2] + "'width='90%;' alt='img" + x2 + "'>")
         }
         
         var modalele = "<div class='modal-dialog' role='document'>" + " <div class='modal-content'>" + "<div class='modal-header'>" + "<h5 class='modal-title' id='" + "model" + String(x1) + "Label" + "'>Artwork By " + artwork[x1].by + "</h5>" + "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" + "<span aria-hidden='true'>&times;</span>" + " </button>" + "</div>" + "<div class='modal-body'>" + "<center>" + images.toString() + "</center>" + "</div>" + "<div class='modal-footer'>" + "<button type='button' class='btn btn-dark' data-dismiss='modal'>Close</button>" + "</div>" + "</div>" + "</div>" + "</div>";
@@ -180,7 +180,7 @@ var link = words[number].link;
 //Articles Code
 function articlesfunc(document) {
     for (var x = articles.length - 1; x >= 0; x -= 1) {
-        var div = "<span>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;'>" + "<span class='ml-2 mr-2 mb-4' style='display: block'>" + "<p class='fontchange'>" + articles[x].description + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2'>Read More</a>" + "</span>" + "</span>";
+        var div = "<span>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<span class='ml-2 mr-2 mb-4' style='display: block'>" + "<p class='fontchange'>" + articles[x].description + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2'>Read More</a>" + "</span>" + "</span>";
         var addTo = document.getElementById("articles");
         var newContent = document.createElement('div');
         newContent.className = "card bg-dark pt-2 mt-3 mb-3 rounded mx-auto text-light";
