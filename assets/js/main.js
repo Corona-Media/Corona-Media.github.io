@@ -59,7 +59,8 @@ var happyvid = videos[6];
 //Article Variables
 var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is Making 3D Printed Face Shields For Frontline Workers"},
                 {image: "assets/images/book-list.jpg", description: "20+ Great Books For Kids To Read While Stuck At Home", link: "assets/articles/book-list.html"},
-                {image: "assets/images/puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"}
+                {image: "assets/images/puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"},
+                {image: "assets/images/corona.png", description: "A Firsthand Account Of A Kid Living Through The Pandemic", link: "assets/articles/kids-corona-experience.html"}
                ];
 
 
