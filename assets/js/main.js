@@ -1,8 +1,6 @@
 //Video Variables
 var videos = ["https://www.youtube-nocookie.com/embed/ykieEE1j9eA",
                   "https://www.youtube-nocookie.com/embed/M5azNpTwVk8",
-                  "https://www.youtube-nocookie.com/embed/e0-2XxgHIXk",
-                  "https://www.youtube-nocookie.com/embed/xWdPusIK8XU",
                   "https://www.youtube-nocookie.com/embed/arMKDDSwrTo",
                   "https://www.youtube-nocookie.com/embed/xGKFVMgjrPc",
                   "https://www.youtube-nocookie.com/embed/cqvVL8IurMw"
