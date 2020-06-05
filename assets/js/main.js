@@ -52,7 +52,7 @@ var words = [{name: "Read A Book", link: 'corona-media.github.io/assets/articles
 
 //Home Page Videos
 var funnyvid = videos[0];
-var happyvid = videos[6];
+var happyvid = videos[4];
 
 //Article Variables
 var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is Making 3D Printed Face Shields For Frontline Workers"},
