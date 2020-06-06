@@ -18,7 +18,7 @@ var artwork = [{by: "Isabelle", files: ["assets/artwork/0/0.jpg",
               ];
 
 //Idea Variables
-var words = [{name: "Read A Book", link: 'corona-media.github.io/assets/articles/book-list.html'},
+var words = [{name: "Read A Book", link: 'https://corona-media.github.io/assets/articles/book-list.html'},
              {name: "Play Video Games", link: 'https://www.epicgames.com/store'},
              {name: "Call Or Text A Friend", link: null},
              {name: "Listen To Music", link: 'https://www.spotify.com/us/'},
@@ -37,16 +37,16 @@ var words = [{name: "Read A Book", link: 'corona-media.github.io/assets/articles
              {name: "Build A Cardboard Box Fort", link: 'https://handsonaswegrow.com/build-fun-cardboard-fort/'},
              {name: "Go On A Bike Ride, Run, Or Walk", link: null},
              {name: "Start  A Garden", link: null},
-             {name: "Do A Puzzle", link: null},
+             {name: "Do A Puzzle", link: 'https://www.amazon.com/s?k=puzzles'},
              {name: "Organize Your Books By Color", link: null},
              {name: "Bake", link: null},
              {name: "Cook", link: null},
-             {name: "Draw Or Color", link: null},
+             {name: "Draw Or Color", link: 'https://www.amazon.com/s?k=coloring+books'},
              {name: "Make A Collage With Scraps Of Paper", link: null},
              {name: "Start A Vlog Or Blog About Your Time Stuck At Home", link: null},
              {name: "Write A Song", link: null},
              {name: "Make Something Out Of Clay", link: null},
-             {name: "Listen To A Podcast", link: null},
+             {name: "Listen To A Podcast", link: 'https://apps.apple.com/us/app/apple-podcasts/id525463029'},
              {name: "Paint A Picture", link: null},
              ];
 

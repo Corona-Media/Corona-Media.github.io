@@ -95,9 +95,9 @@ h3{
    user-select: none;
 }
 
-.input2{
-    width: 90%;
-    height: 100px;
+.input{
+    width: 90% !important;
+    height: 100px !important;
 }
 
 @media (max-width : 700px) {

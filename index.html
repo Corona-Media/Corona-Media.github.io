@@ -11,6 +11,7 @@
     <meta name="robots" content="index, follow">
     <meta name="og:url" content="https://corona-media.github.io">
     <meta name="twitter:url" content="https://corona-media.github.io">
+    <meta name="twitter:description" content="A site for kids, by kids, to help keep kids busy, informed, and content while stuck at home.">
     <meta property="og:title" content="Covid Kids - Activities For Kids Stuck At Home">
     <meta property="og:image" content="https://corona-media.github.io/assets/images/corona.png">
     <meta property="og:type" content="website">
@@ -42,7 +43,7 @@
                 <center>
                     <h2 class="text-light">Activities</h2>
                     <div class="p-3 mb-3" style="width: 90%; height: 300px;" onclick="ideasfunc(document)">
-                        <h6 class="text-light">Click To Generate Random Activity</h6>
+                        <h6 class="text-light">Click To Generate A Random Activity!</h6>
                         <br>
                         <h3 class="text-center text-light mt-5" id="text"></h3>
                         <br>
@@ -99,24 +100,10 @@
     
     <footer class="footer bg-dark p-3 mt-5">
       <div class="container">
-        <span class="text-light">Beta Version 0.57</span>
+        <span class="text-light">Beta Version 0.67</span>
       </div>
     </footer>
-      
-    <script> 
-        var settings = {
-          "url": "https://api.covid19api.com/world/total",
-          "method": "GET",
-          "timeout": 0,
-        };
 
-        $.ajax(settings).done(function (response) {
-            $("#total").text(response.TotalRecovered + " People Have Recovered From Covid-19.");
-        });
-    </script>
-      
-    <script src="assets/js/main.js"></script>
-    
     <div class="modal fade" id="model00" tabindex="-1" role="dialog" aria-labelledby="model00Label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -140,5 +127,19 @@
             </div>
         </div>
       </div>
+      
+    <script> 
+        var settings = {
+          "url": "https://api.covid19api.com/world/total",
+          "method": "GET",
+          "timeout": 0,
+        };
+
+        $.ajax(settings).done(function (response) {
+            $("#total").text(response.TotalRecovered + " People Have Recovered From Covid-19.");
+        });
+    </script>
+      
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
