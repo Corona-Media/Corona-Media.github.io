@@ -141,3 +141,32 @@ textarea:focus{
         margin-left: 10%;
     }
 }
+
+@media (max-width : 447px) {
+    .fontsize{
+        font-size: 11pt;
+    }
+}
+
+@media (max-width : 385px) {
+    .linkfontsize{
+    }
+    .fontsize{
+        font-size: 10pt;
+    }
+}
+
+.linkfontsize{
+    position: absolute;                  
+    bottom: 7px; 
+    left: 20%; 
+    right: 20%;
+}
+
+@media (max-width : 333px) {
+    .linkfontsize{
+    }
+    .fontsize{
+        font-size: 9pt;
+    }
+}
