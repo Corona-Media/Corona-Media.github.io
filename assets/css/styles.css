@@ -1,9 +1,332 @@
-body{
-    background-color: cadetblue;
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
-a{
+body{
+    background-color: cadetblue;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+a.text-light:hover {
+    color: #cbd3da !important;
+}
+
+.mt-1{
+    margin-top: 0.25rem !important;
+}
+
+.mr-1{
+    margin-right: 0.25rem !important;
+}
+
+.mb-1{
+    margin-bottom: 0.25rem !important;
+}
+
+.ml-1 {
+    margin-left: 0.25rem !important;
+}
+
+.m-2 {
+    margin: 0.5rem !important;
+}
+
+.mt-2{
+    margin-top: 0.5rem !important;
+}
+
+.mr-2 {
+    margin-right: 0.5rem !important;
+}
+
+.mb-2{
+    margin-bottom: 0.5rem !important;
+}
+
+.ml-2{
+    margin-left: 0.5rem !important;
+}
+
+.m-3 {
+    margin: 1rem !important;
+}
+
+.mt-3{
+    margin-top: 1rem !important;
+}
+
+.mr-3{
+    margin-right: 1rem !important;
+}
+
+.mb-3{
+    margin-bottom: 1rem !important;
+}
+
+.ml-3{
+    margin-left: 1rem !important;
+}
+
+.m-4 {
+    margin: 1.5rem !important;
+}
+
+.mt-4{
+    margin-top: 1.5rem !important;
+}
+
+.mr-4{
+    margin-right: 1.5rem !important;
+}
+
+.mb-4{
+    margin-bottom: 1.5rem !important;
+}
+
+.ml-4{
+    margin-left: 1.5rem !important;
+}
+
+.m-5 {
+    margin: 3rem !important;
+}
+
+.mt-5{
+    margin-top: 3rem !important;
+}
+
+.mr-5{
+    margin-right: 3rem !important;
+}
+
+.mb-5{
+    margin-bottom: 3rem !important;
+}
+
+.ml-5{
+    margin-left: 3rem !important;
+}
+
+.text-dark {
+    color: #343a40 !important;
+}
+
+a.text-dark:hover {
+    color: #121416 !important;
+}
+
+.text-decoration-none {
     text-decoration: none !important;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-light {
+    color: #f8f9fa !important;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.p-1 {
+    padding: 0.25rem !important;
+}
+
+.pt-1{
+    padding-top: 0.25rem !important;
+}
+
+.pr-1{
+    padding-right: 0.25rem !important;
+}
+
+.pb-1{
+    padding-bottom: 0.25rem !important;
+}
+
+.pl-1{
+    padding-left: 0.25rem !important;
+}
+
+.p-2 {
+    padding: 0.5rem !important;
+}
+
+.pt-2{
+    padding-top: 0.5rem !important;
+}
+
+.pr-2{
+    padding-right: 0.5rem !important;
+}
+
+.pb-2{
+    padding-bottom: 0.5rem !important;
+}
+
+.pl-2{
+    padding-left: 0.5rem !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.pt-3{
+    padding-top: 1rem !important;
+}
+
+.pr-3{
+    padding-right: 1rem !important;
+}
+
+.pb-3{
+    padding-bottom: 1rem !important;
+}
+
+.pl-3{
+    padding-left: 1rem !important;
+}
+
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+.pt-4{
+    padding-top: 1.5rem !important;
+}
+
+.pr-4{
+    padding-right: 1.5rem !important;
+}
+
+.pb-4{
+    padding-bottom: 1.5rem !important;
+}
+
+.pl-4{
+    padding-left: 1.5rem !important;
+}
+
+.p-5 {
+    padding: 3rem !important;
+}
+
+.pt-5{
+    padding-top: 3rem !important;
+}
+
+.pr-5{
+    padding-right: 3rem !important;
+}
+
+.pb-5{
+    padding-bottom: 3rem !important;
+}
+
+.pl-5{
+    padding-left: 3rem !important;
+}
+
+.col{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-light:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-dark:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none !important;
+    background-color: transparent;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 .title{
@@ -69,24 +392,6 @@ h3{
     margin-right: 20px;
 }
 
-@media (max-width : 475px) {
-    .mobile{
-        height: 110vw !important;
-    }
-}
-
-@media (max-width : 360px) {
-    .mobile{
-        height: 105vw !important;
-    }
-}
-
-@media (min-width : 460px) {
-    .nonmobilemargin{
-        margin-bottom: 35px !important;
-    }
-}
-
 .unselectable {
    -moz-user-select: -moz-none;
    -khtml-user-select: none;
@@ -98,12 +403,6 @@ h3{
 .input{
     width: 90% !important;
     height: 100px !important;
-}
-
-@media (max-width : 700px) {
-    .fontchange{
-        font-size: 2.5vw;
-    }
 }
 
 .textarea{
@@ -122,6 +421,13 @@ h3{
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.linkfontsize{
+    position: absolute;                  
+    bottom: 7px; 
+    left: 20%; 
+    right: 20%;
+}
+
 textarea:focus{
     color:#495057;
     background-color:#fff;
@@ -130,9 +436,19 @@ textarea:focus{
     box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
 }
 
+.gametext{
+    font-family: customFont;
+    margin-left: 35%;
+    margin-right: 35%
+}
+
 .mobile-article-mar{
     margin-right: 35%;
     margin-left: 35%;
+}
+
+.gametextmargin{
+    margin-top: 20%;
 }
 
 @media (max-width : 1000px) {
@@ -140,33 +456,62 @@ textarea:focus{
         margin-right: 10%;
         margin-left: 10%;
     }
+
+    .gametext{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
 
 @media (max-width : 447px) {
     .fontsize{
         font-size: 11pt;
     }
+
+    .gametext{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 @media (max-width : 385px) {
-    .linkfontsize{
-    }
     .fontsize{
         font-size: 10pt;
     }
 }
 
-.linkfontsize{
-    position: absolute;                  
-    bottom: 7px; 
-    left: 20%; 
-    right: 20%;
-}
-
 @media (max-width : 333px) {
-    .linkfontsize{
-    }
     .fontsize{
         font-size: 9pt;
+    }
+}
+
+@media (max-width : 1200px) {
+    #input{
+        width: 90%;
+    }
+}
+
+@media (max-width : 700px) {
+    .fontchange{
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width : 475px) {
+    .mobile{
+        height: 110vw !important;
+    }
+}
+
+@media (max-width : 360px) {
+    .mobile{
+        height: 105vw !important;
+    }
+}
+
+@media (min-width : 460px) {
+    .nonmobilemargin{
+        margin-bottom: 35px !important;
     }
 }
