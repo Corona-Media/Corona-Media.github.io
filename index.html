@@ -26,12 +26,12 @@
     <meta name='description' content='A site for kids, by kids, to help keep kids busy, informed, and content while stuck at home.'>
   </head>
 
-  <body onload="start();">
+  <body onload="start(); indexfunc(document);">
     <script type="text/javascript" src="assets/includes/header.js"></script>
     <br><br>
     <div class="container-fluid">
         <div class="row mt-4 mar">
-            <div class="card bg-dark pt-2 rounded mx-auto mt-5 mb-3"  style="width: 600px; height: 400px;">
+            <div class="card bg-dark pt-2 rounded mx-auto mt-4 mb-3"  style="width: 600px; height: 400px;">
                 <center>
                     <h2 class="text-light">Featured Funny Video</h2>
                     <iframe title="funny video" id="funnyvid" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"></iframe>
@@ -39,7 +39,7 @@
                 </center>
             </div>
 
-            <div class="card bg-dark mr-3 ml-3 pt-2 mt-5 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
+            <div class="card bg-dark mr-3 ml-3 pt-2 mt-4 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                 <center>
                     <h2 class="text-light">Activities</h2>
                     <div class="p-3 mb-3" style="width: 90%; height: 300px;" onclick="ideasfunc(document)">
@@ -53,7 +53,7 @@
                 </center>
             </div>
             
-            <div class="card bg-dark mr-3 ml-3 mt-5 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
+            <div class="card bg-dark mr-3 ml-3 mt-4 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                 <center>
                     <h2 class="text-light mb-4">Info</h2>
                     <h6 id="total" class="text-light ml-2 mr-2"></h6>
@@ -63,7 +63,7 @@
                 </center> 
             </div>
             
-            <div class="card bg-dark pt-2 rounded mx-auto mt-5 mb-3"  style="width: 600px; height: 400px;">
+            <div class="card bg-dark pt-2 rounded mx-auto mt-4 mb-3"  style="width: 600px; height: 400px;">
                 <center>
                     <h2 class="text-light">Featured Happy Video</h2>
                     <iframe title="happy video" id="happyvid" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
@@ -71,21 +71,17 @@
                 </center>
             </div>
             
-            <div class="card bg-dark mr-3 ml-3 pt-2 mt-5 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
+            <div class="card bg-dark mr-3 ml-3 pt-2 mt-4 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                     <h2 class="text-light text-center">Articles</h2>
                     <br>
                     <ul class="text-light" id="articleslist">
-                        <li><h6><a class="title2" href="assets/articles/discover-camp.html" target="_blank">Summer Camp 3D Printing Face Shields For Essential Workers.</a></h6></li>
-                        <li><h6><a class="title2" href="assets/articles/book-list.html" target="_blank">20+ Great Books For Kids To Read While Stuck At Home</a></h6></li>
-                        <li><h6><a class="title2" href="assets/articles/activities-list.html" target="_blank">30+ Activities to keep you busy while bored at home</a></h6></li>
-                        <li><h6><a class="title2" href="assets/articles/kids-corona-experience.html" target="_blank">A Firsthand Account Of A Kid Living Through The Pandemic</a></h6></li>
-                        <li><h6><a class="title2" href="assets/articles/movie-list.html" target="_blank">25+ Great Family Friendly Movies To Pass The Time</a></h6></li>
+                        
                     </ul>
                     <br>
-                    <a class="title2 text-center" href="articles.html">More</a>
+                    <a class="title2 text-center linkfontsize" href="articles.html">More</a>
             </div>
             
-            <div class="card bg-dark mr-3 ml-3 mt-5 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
+            <div class="card bg-dark mr-3 ml-3 mt-4 pt-2 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                 <center>
                     <h2 class="text-light mb-3">Artwork</h2>
                     <img src="assets/artwork/0/0.jpg" height="290" onclick="popupindex()" alt="mainartwork" class="mb-2">
@@ -96,9 +92,9 @@
         </div>
     </div>
     
-    <footer class="footer bg-dark p-3 mt-5">
+    <footer class="footer bg-dark p-3 mt-4">
       <div class="container">
-        <span class="text-light">Beta Version 0.7.8</span>
+        <span class="text-light">Beta Version 0.8.8</span>
       </div>
     </footer>
 

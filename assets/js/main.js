@@ -55,7 +55,7 @@ var funnyvid = videos[0];
 var happyvid = videos[4];
 
 //Article Variables
-var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is Making 3D Printed Face Shields For Frontline Workers"},
+var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is Making 3D Printed Face Shields For Frontline Workers", link: "assets/articles/discover-camp.html"},
                 {image: "assets/images/book-list.jpg", description: "20+ Great Books For Kids To Read While Stuck At Home", link: "assets/articles/book-list.html"},
                 {image: "assets/images/puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"},
                 {image: "assets/images/corona.png", description: "A Firsthand Account Of A Kid Living Through The Pandemic", link: "assets/articles/kids-corona-experience.html"},
@@ -186,5 +186,16 @@ function articlesfunc(document) {
         newContent.style = "width: 95%; height: 135px;";
         newContent.innerHTML = div;
         addTo.appendChild(newContent);
+    }
+}
+
+function indexfunc(document) {
+    for (var x = articles.length - 1; x >= (articles.length - 5); x -= 1) {
+        var div = "<h6><a class='title2' href='" + articles[x].link + "' target='_blank'>" + articles[x].description +"</a></h6>";
+        var addTo = document.getElementById("articleslist");
+        var newContent = document.createElement('li');
+        newContent.innerHTML = div;
+        addTo.appendChild(newContent);
+        
     }
 }
