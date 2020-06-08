@@ -281,6 +281,14 @@ button {
     -webkit-appearance: button;
 }
 
+.container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .tooltip {
     position: absolute;
     z-index: 1070;
