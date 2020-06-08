@@ -15,7 +15,7 @@ var artwork = [{by: "Isabelle", files: ["assets/artwork/0/0.jpg",
                                         "assets/artwork/0/5.jpg"]
                }
 
-              ];
+              ]; 
 
 //Idea Variables
 var words = [{name: "Read A Book", link: 'https://corona-media.github.io/assets/articles/book-list.html'},
