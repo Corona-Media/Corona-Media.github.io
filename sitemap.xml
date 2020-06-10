@@ -52,4 +52,8 @@
 	<loc>https://corona-media.github.io/assets/articles/movie-list.html</loc>
 	<priority>0.3</priority>
 </url>
+<url>
+	<loc>https://corona-media.github.io/assets/articles/planning-summer.html</loc>
+	<priority>0.3</priority>
+</url>
 </urlset>
