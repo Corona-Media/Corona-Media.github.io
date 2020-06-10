@@ -55,7 +55,7 @@ var funnyvid = videos[0];
 var happyvid = videos[4];
 
 //Article Variables
-var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is Making 3D Printed Face Shields For Frontline Workers", link: "assets/articles/discover-camp.html"},
+var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is 3D Printing Face Shields For Frontline Workers", link: "assets/articles/discover-camp.html"},
                 {image: "assets/images/book-list.jpg", description: "20+ Great Books For Kids To Read While Stuck At Home", link: "assets/articles/book-list.html"},
                 {image: "assets/images/puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"},
                 {image: "assets/images/corona.png", description: "A Firsthand Account Of A Kid Living Through The Pandemic", link: "assets/articles/kids-corona-experience.html"},
@@ -179,11 +179,11 @@ var link = words[number].link;
 //Articles Code
 function articlesfunc(document) {
     for (var x = articles.length - 1; x >= 0; x -= 1) {
-        var div = "<span>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<span class='ml-2 mr-2 mb-4' style='display: block'>" + "<p class='fontchange'>" + articles[x].description + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2'>Read More</a>" + "</span>" + "</span>";
+        var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
         var addTo = document.getElementById("articles");
         var newContent = document.createElement('div');
-        newContent.className = "card bg-dark pt-2 mt-3 mb-3 rounded mx-auto text-light";
-        newContent.style = "width: 95%; height: 135px;";
+        newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
+        newContent.style = "width: 100%; height: 135px;";
         newContent.innerHTML = div;
         addTo.appendChild(newContent);
     }

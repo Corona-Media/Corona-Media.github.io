@@ -806,7 +806,7 @@ h3{
 
 .input{
     width: 90% !important;
-    height: 100px !important;
+    height: 150px !important;
 }
 
 .bg-light {
@@ -1167,6 +1167,25 @@ h5 {
     font-size: 1.25rem;
 }
 
+.articlereadmore{
+    position: relative;
+    top: 30px;
+}
+
+.mr-2 > .articlereadmore{
+    position: absolute;
+    top: 85%;
+    left: calc(50% + 100px);
+    transform: translate(-50%, -50%);
+}
+
+.mr-2 > .fontchange{
+    position: absolute;
+    top: 20%;
+    left: calc(50% + 100px);
+    transform: translate(-50%, -50%);
+}
+
 .h6,
 h6 {
     font-size: 1rem;
@@ -1175,8 +1194,8 @@ h6 {
 .linkfontsize{
     position: absolute;                  
     bottom: 7px; 
-    left: 20%; 
-    right: 20%;
+    left: 10%; 
+    right: 10%;
 }
 
 .card {
@@ -1255,58 +1274,12 @@ button.close {
     margin-top: 20%;
 }
 
-@media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 500px;
-        margin: 1.75rem auto;
-    }
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
+    #input{
+        width: 90%;
     }
 }
 
@@ -1322,6 +1295,47 @@ button.close {
     }
 }
 
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width : 855px) {
+    .mr-2 > .fontchange{
+        left: calc(35% + 100px);
+        transform: translate(-20%, -45%);
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width : 700px) {
+    .fontchange{
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width : 475px) {
+    .mobile{
+        height: 110vw !important;
+    }
+}
+
 @media (max-width : 447px) {
     .fontsize{
         font-size: 11pt;
@@ -1333,33 +1347,32 @@ button.close {
     }
 }
 
-@media (max-width : 385px) {
-    .fontsize{
-        font-size: 10pt;
+@media (min-width : 460px) {
+    .nonmobilemargin{
+        margin-bottom: 35px !important;
     }
 }
 
-@media (max-width : 333px) {
-    .fontsize{
+@media (max-width : 420px) {
+    .mr-2 > .fontchange{
+        left: calc(220px);
+        transform: translate(-20%, -45%);
+    }
+    .articlereadmore{
         font-size: 9pt;
     }
 }
 
-@media (max-width : 1200px) {
-    #input{
-        width: 90%;
+@media (max-width : 385px) {
+    .fontsize{
+        font-size: 10pt;
     }
-}
-
-@media (max-width : 700px) {
-    .fontchange{
-        font-size: 2.5vw;
+    .mr-2 > .fontchange{
+        left: calc(210px);
+        transform: translate(-20%, -45%);
     }
-}
-
-@media (max-width : 475px) {
-    .mobile{
-        height: 110vw !important;
+    .articlereadmore{
+        font-size: 8pt;
     }
 }
 
@@ -1369,8 +1382,8 @@ button.close {
     }
 }
 
-@media (min-width : 460px) {
-    .nonmobilemargin{
-        margin-bottom: 35px !important;
+@media (max-width : 333px) {
+    .fontsize{
+        font-size: 9pt;
     }
 }
