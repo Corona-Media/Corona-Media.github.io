@@ -18,13 +18,13 @@ var artwork = [{by: "Isabelle", files: ["assets/artwork/0/0.jpg",
               ]; 
 
 //Idea Variables
-var words = [{name: "Read A Book Or Ebook", link: 'https://corona-media.github.io/assets/articles/book-list.html'},
+var words = [{name: "Read A Book Or Ebook", link: 'https://covidkidsonline.com/assets/articles/book-list.html'},
              {name: "Play Video Games", link: 'https://www.epicgames.com/store'},
              {name: "Call, Text, Or Email A Friend", link: null},
              {name: "Listen To Music", link: 'https://www.spotify.com/us/'},
              {name: "Learn A Musical Instrument", link: 'https://www.udemy.com/topic/piano/'},
              {name: "Watch Youtube", link: 'https://www.youtube.com/'},
-             {name: "Watch A Movie Or TV Show", link: 'https://corona-media.github.io/assets/articles/movie-list.html'},
+             {name: "Watch A Movie Or TV Show", link: 'https://covidkidsonline.com/assets/articles/movie-list.html'},
              {name: "Play A Board Or Card Game", link: 'https://www.gearhungry.com/best-family-board-games/'},
              {name: "Read The News", link: 'https://news.google.com/'},
              {name: "Start Learning A New Language", link: 'https://www.duolingo.com/'},
@@ -62,7 +62,7 @@ var words = [{name: "Read A Book Or Ebook", link: 'https://corona-media.github.i
              {name: "Make Something With Lego", link: null},
              {name: "Play A Game Of Chess", link: 'https://www.chess.com/play/computer'},
              {name: "Play With Your Pet", link: null},
-             {name: "Read Outside", link: 'https://corona-media.github.io/assets/articles/book-list.html'},
+             {name: "Read Outside", link: 'https://covidkidsonline.com/assets/articles/book-list.html'},
              {name: "Take A Virtual Exercise Class", link: 'https://www.gonoodle.com'},
              {name: "Take A Virtual Museum Tour", link: 'https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours'}
              ];
@@ -86,7 +86,7 @@ var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer 
 
 //Start Function 
 function start() {
-    console.log("This is a work in progress. Please suggest any improvements on the feedback page https://corona-media.github.io/feedback.html");
+    console.log("This is a work in progress. Please suggest any improvements on the feedback page https://covidkidsonline.com/feedback.html");
     
     //popup for feedback
     setTimeout(function() {

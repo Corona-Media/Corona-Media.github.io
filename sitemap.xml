@@ -2,58 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-	<loc>https://corona-media.github.io/</loc>
+	<loc>https://covidkidsonline.com/</loc>
 </url>
 <url>
-	<loc>https://corona-media.github.io/index.html</loc>
+	<loc>https://covidkidsonline.com/index.html</loc>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/videos.html</loc>
+	<loc>https://covidkidsonline.com/videos.html</loc>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/articles.html</loc>
+	<loc>https://covidkidsonline.com/articles.html</loc>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/artwork.html</loc>
+	<loc>https://covidkidsonline.com/artwork.html</loc>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/feedback.html</loc>
+	<loc>https://covidkidsonline.com/feedback.html</loc>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/mobilegame.html</loc>
+	<loc>https://covidkidsonline.com/mobilegame.html</loc>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/credits.html</loc>
+	<loc>https://covidkidsonline.com/credits.html</loc>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/assets/articles/discover-camp.html</loc>
+	<loc>https://covidkidsonline.com/assets/articles/discover-camp.html</loc>
 	<priority>0.3</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/assets/articles/book-list.html</loc>
+	<loc>https://covidkidsonline.com/assets/articles/book-list.html</loc>
 	<priority>0.3</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/assets/articles/activities-list.html</loc>
+	<loc>https://covidkidsonline.com/assets/articles/activities-list.html</loc>
 	<priority>0.3</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/assets/articles/kids-corona-experience.html</loc>
+	<loc>https://covidkidsonline.com/assets/articles/kids-corona-experience.html</loc>
 	<priority>0.3</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/assets/articles/movie-list.html</loc>
+	<loc>https://covidkidsonline.com/assets/articles/movie-list.html</loc>
 	<priority>0.3</priority>
 </url>
 <url>
-	<loc>https://corona-media.github.io/assets/articles/planning-summer.html</loc>
+	<loc>https://covidkidsonline.com/assets/articles/planning-summer.html</loc>
+	<priority>0.3</priority>
+</url>
+<url>
+	<loc>https://covidkidsonline.com/assets/articles/online-course.html</loc>
 	<priority>0.3</priority>
 </url>
 </urlset>
