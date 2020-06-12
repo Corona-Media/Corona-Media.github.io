@@ -18,16 +18,16 @@ var artwork = [{by: "Isabelle", files: ["assets/artwork/0/0.jpg",
               ]; 
 
 //Idea Variables
-var words = [{name: "Read A Book", link: 'https://corona-media.github.io/assets/articles/book-list.html'},
+var words = [{name: "Read A Book Or Ebook", link: 'https://corona-media.github.io/assets/articles/book-list.html'},
              {name: "Play Video Games", link: 'https://www.epicgames.com/store'},
-             {name: "Call Or Text A Friend", link: null},
+             {name: "Call, Text, Or Email A Friend", link: null},
              {name: "Listen To Music", link: 'https://www.spotify.com/us/'},
              {name: "Learn A Musical Instrument", link: 'https://www.udemy.com/topic/piano/'},
              {name: "Watch Youtube", link: 'https://www.youtube.com/'},
-             {name: "Watch A Movie Or TV Show", link: 'https://www.netflix.com/'},
+             {name: "Watch A Movie Or TV Show", link: 'https://corona-media.github.io/assets/articles/movie-list.html'},
              {name: "Play A Board Or Card Game", link: 'https://www.gearhungry.com/best-family-board-games/'},
              {name: "Read The News", link: 'https://news.google.com/'},
-             {name: "Learn A New Language", link: 'https://www.duolingo.com/'},
+             {name: "Start Learning A New Language", link: 'https://www.duolingo.com/'},
              {name: "Do Extra Chores", link: null},
              {name: "Learn To Code", link: 'https://www.khanacademy.org/computing/computer-programming'},
              {name: "Take an Online Course", link: 'https://www.edx.org'},
@@ -39,8 +39,6 @@ var words = [{name: "Read A Book", link: 'https://corona-media.github.io/assets/
              {name: "Start  A Garden", link: null},
              {name: "Do A Puzzle", link: 'https://www.amazon.com/s?k=puzzles'},
              {name: "Organize Your Books By Color", link: null},
-             {name: "Bake", link: null},
-             {name: "Cook", link: null},
              {name: "Draw Or Color", link: 'https://www.amazon.com/s?k=coloring+books'},
              {name: "Make A Collage With Scraps Of Paper", link: null},
              {name: "Start A Vlog Or Blog About Your Time Stuck At Home", link: null},
@@ -48,6 +46,25 @@ var words = [{name: "Read A Book", link: 'https://corona-media.github.io/assets/
              {name: "Make Something Out Of Clay", link: null},
              {name: "Listen To A Podcast", link: 'https://apps.apple.com/us/app/apple-podcasts/id525463029'},
              {name: "Paint A Picture", link: null},
+             {name: "Make A Comic Book", link: null},
+             {name: "Start A Book Club With Family Or Friends", link: null},
+             {name: "Paint Rocks", link: null},
+             {name: "Make Homemade Playdough And Slime", link: null},
+             {name: "Play Multiplayer Video Games With Your Friends", link: null},
+             {name: "Video Chat With Friends", link: null},
+             {name: "Bake A Cake Or Cupcakes", link: 'https://www.google.com/search?q=cupcake+recipes&rlz=1C5CHFA_enUS729US729&oq=cupcake+recipies'},
+             {name: "Perfect A Recipe", link: null},
+             {name: "Make Breakfast For Dinner", link: null},
+             {name: "Try Out A Mini Baking Kit", link: 'https://www.amazon.com/SmartLab-Toys-SL322431-Tiny-Baking/dp/B07PF22K81'},
+             {name: "Play Solitare", link: 'https://www.google.com/search?q=play+solitaire'},
+             {name: "Play Uno", link: 'https://www.amazon.com/Mattel-Games-Wild-Card-Game/dp/B07234H86N/'},
+             {name: "MadLibs", link: 'http://www.madlibs.com/printables/'},
+             {name: "Make Something With Lego", link: null},
+             {name: "Play A Game Of Chess", link: 'https://www.chess.com/play/computer'},
+             {name: "Play With Your Pet", link: null},
+             {name: "Read Outside", link: 'https://corona-media.github.io/assets/articles/book-list.html'},
+             {name: "Take A Virtual Exercise Class", link: 'https://www.gonoodle.com'},
+             {name: "Take A Virtual Museum Tour", link: 'https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours'}
              ];
 
 //Home Page Videos
@@ -60,7 +77,8 @@ var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer 
                 {image: "assets/images/puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"},
                 {image: "assets/images/corona.png", description: "A Firsthand Account Of A Kid Living Through The Pandemic", link: "assets/articles/kids-corona-experience.html"},
                 {image: "assets/images/camera.jpg", description: "25+ Great Family Friendly Movies To Pass The Time", link: "assets/articles/movie-list.html"},
-                {image: "assets/images/summer-plan.png", description: "How To Plan Your Summer During These Uncertain Times", link: "assets/articles/planning-summer.html"}
+                {image: "assets/images/summer-plan.png", description: "How To Plan Your Summer During These Uncertain Times", link: "assets/articles/planning-summer.html"},
+                {image: "assets/images/course-site.png", description: "The 3 Best Online Course Sites", link: "assets/articles/online-course.html"}
                ];
 
 
@@ -90,19 +108,6 @@ function videosfunc(document) {
         addTo.appendChild(newContent);
     }
 }
-
-
-//home page videos
-var funnyvidid = document.getElementById("funnyvid");
-var happyvidid = document.getElementById("happyvid");
-
-funnyvidid.setAttribute("src", funnyvid);
-funnyvidid.setAttribute("width", "90%");
-funnyvidid.setAttribute("height", "300px");
-
-happyvidid.setAttribute("src", happyvid);
-happyvidid.setAttribute("width", "90%");
-happyvidid.setAttribute("height", "300px");
 
 
 //Artwork Code
@@ -190,6 +195,7 @@ function articlesfunc(document) {
     }
 }
 
+
 function indexfunc(document) {
     for (var x = articles.length - 1; x >= (articles.length - 5); x -= 1) {
         var div = "<h6><a class='title2' href='" + articles[x].link + "' target='_blank'>" + articles[x].description +"</a></h6>";
@@ -199,4 +205,19 @@ function indexfunc(document) {
         addTo.appendChild(newContent);
         
     }
+
+    //home page videos
+    var funnyvidid = document.getElementById("funnyvid");
+    var happyvidid = document.getElementById("happyvid");
+
+    funnyvidid.setAttribute("src", funnyvid);
+    funnyvidid.setAttribute("width", "90%");
+    funnyvidid.setAttribute("height", "300px");
+
+    happyvidid.setAttribute("src", happyvid);
+    happyvidid.setAttribute("width", "90%");
+    happyvidid.setAttribute("height", "300px");
+}
+
+
 }
