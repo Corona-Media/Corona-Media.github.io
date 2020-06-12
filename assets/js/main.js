@@ -220,4 +220,14 @@ function indexfunc(document) {
 }
 
 
+function validatefeedback() {
+    var inputText = document.forms["feedbackform"]["message"].value;
+    console.log(inputText);
+    if (inputText != "") {
+        alert("Thank You For Contacting Us.");
+        return true;
+    } else {
+        alert("Please Write Something Before Submitting.");
+        return false;
+    }
 }
