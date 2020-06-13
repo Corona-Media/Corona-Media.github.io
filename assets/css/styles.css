@@ -3,6 +3,8 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+    position: relative;
+    min-height: 100%;
 }
 
 input[type="button"].btn-block,
@@ -410,6 +412,7 @@ body{
     line-height: 1.5;
     color: #212529;
     text-align: left;
+    margin-bottom: 60px;
 }
 
 a.text-light:hover {
@@ -1085,6 +1088,13 @@ ul {
 footer,
 header{
     display: block;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
 }
 
 :root {
