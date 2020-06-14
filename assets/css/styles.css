@@ -413,6 +413,7 @@ body{
     color: #212529;
     text-align: left;
     margin-bottom: 60px;
+    background-attachment: fixed;
 }
 
 a.text-light:hover {
@@ -1004,6 +1005,7 @@ button:focus {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1rem;
+    overflow: auto;
 }
 
 .modal-footer {
