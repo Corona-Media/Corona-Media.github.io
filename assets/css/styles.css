@@ -413,7 +413,9 @@ body{
     color: #212529;
     text-align: left;
     margin-bottom: 60px;
-    background-attachment: fixed;
+    overflow: auto;
+    overscroll-behavior: none;
+    
 }
 
 a.text-light:hover {
@@ -798,6 +800,7 @@ h3{
 .mar{
     margin-left: 20px;
     margin-right: 20px;
+    overflow: hidden
 }
 
 .unselectable {
@@ -1096,7 +1099,7 @@ header{
     position: absolute;
     bottom: 0;
     width: 100%;
-
+    overflow: hidden;
 }
 
 :root {
@@ -1229,6 +1232,7 @@ h6 {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
+    overflow: auto;
 }
 
 .user-select-all {
