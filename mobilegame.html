@@ -13,5 +13,18 @@
         <br>
         <button class="btn btn-dark" onclick="window.location.href='covidkidsgame/index.html'">I'm On A Computer</button>
     </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => {
+                    console.log('Regestered!', reg);
+                }).catch(err => {
+                    console.log('Registration Failed: ', err);
+                });
+            });
+        }
+    </script>
   </body>
 </html>

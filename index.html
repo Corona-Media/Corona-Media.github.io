@@ -94,7 +94,7 @@
     
     <footer class="footer bg-dark p-3 mt-4">
       <div class="container">
-        <span class="text-light">Version 1.0.3</span>
+        <span class="text-light">Version 1.0.4</span>
       </div>
     </footer>
 
@@ -131,6 +131,52 @@
 
         $.ajax(settings).done(function (response) {
             $("#total").text(response.TotalRecovered + " People Have Recovered From Covid-19.");
+        });
+
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => {
+                    console.log('Regestered!', reg);
+                }).catch(err => {
+                    console.log('Registration Failed: ', err);
+                });
+            });
+        }
+
+        const divInstall = document.getElementById('installContainer');
+        const butInstall = document.getElementById('butInstall');
+
+        window.addEventListener('beforeinstallprompt', (event) => {
+            console.log('👍', 'beforeinstallprompt', event);
+            // Stash the event so it can be triggered later.
+            window.deferredPrompt = event;
+            // Remove the 'hidden' class from the install button container
+            divInstall.classList.toggle('hidden', false);
+        });
+
+        butInstall.addEventListener('click', () => {
+            console.log('👍', 'butInstall-clicked');
+            const promptEvent = window.deferredPrompt;
+            if (!promptEvent) {
+                // The deferred prompt isn't available.
+                return;
+            }
+            // Show the install prompt.
+            promptEvent.prompt();
+            // Log the result
+            promptEvent.userChoice.then((result) => {
+                console.log('👍', 'userChoice', result);
+                // Reset the deferred prompt variable, since
+                // prompt() can only be called once.
+                window.deferredPrompt = null;
+                // Hide the install button.
+                divInstall.classList.toggle('hidden', true);
+            });
+        });
+
+        window.addEventListener('appinstalled', (event) => {
+            console.log('👍', 'appinstalled', event);
         });
     </script>
 

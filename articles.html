@@ -32,5 +32,18 @@
       </div>
       
       <script src="assets/js/main.js"></script>
+
+      <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js')
+                  .then(reg => {
+                      console.log('Regestered!', reg);
+                  }).catch(err => {
+                      console.log('Registration Failed: ', err);
+                  });
+              });
+          }
+      </script>
   </body>
 </html>
