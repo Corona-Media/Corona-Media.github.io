@@ -9,6 +9,7 @@ const resourcesToPrecache = [
     '/assets/articles/online-course.html',
     '/assets/articles/planning-summer.html',
     'https://api.covid19api.com/world/total',
+    'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
     '/index.html',
     '/videos.html',
     '/news.html',
