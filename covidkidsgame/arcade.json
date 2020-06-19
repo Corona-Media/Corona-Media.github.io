@@ -1,0 +1,32 @@
+{
+	"name": "CovidKids.io",
+	"version": "1.1.2",
+	"description": "A game to keep kids entertained during the pandemic",
+	"id": "",
+	"unique-id": "4tw1bz9tp5q",
+	"viewport-width": 1280,
+	"viewport-height": 1024,
+	"author": "CovidKidsOnline",
+	"email": "MooVally@gmail.com",
+	"website": "CovidKidsOnline.com",
+	"orientations": "landscape",
+	"c2version": "244",
+	"c3version": "r204",
+	"ife": true,
+	"used-plugins": [
+		"TextBox",
+		"Sprite",
+		"Text",
+		"Mouse",
+		"Keyboard",
+		"ScirraArcadeV4",
+		"Audio",
+		"Browser",
+		"Touch"
+	],
+	"used-behaviors": [
+		"bound",
+		"EightDir",
+		"Bullet"
+	]
+}
