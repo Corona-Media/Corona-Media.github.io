@@ -14,8 +14,7 @@ var artwork = [{by: "Isabelle", files: ["assets/artwork/0/0.jpg",
                                         "assets/artwork/0/4.jpg", 
                                         "assets/artwork/0/5.jpg"]
                }
-
-              ]; 
+]; 
 
 //Idea Variables
 var words = [{name: "Read A Book Or Ebook", link: 'https://covidkidsonline.com/assets/articles/book-list.html'},
@@ -81,7 +80,7 @@ var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer 
                 {image: "assets/images/course-site.png", description: "The 3 Best Online Course Sites", link: "assets/articles/online-course.html"}
                ];
 
-
+var starredArticles = [];
 
 
 //Start Function 
@@ -182,16 +181,71 @@ var link = words[number].link;
 }
 
 
-//Articles Code
-function articlesfunc(document) {
-    for (var x = articles.length - 1; x >= 0; x -= 1) {
-        var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
-        var addTo = document.getElementById("articles");
-        var newContent = document.createElement('div');
-        newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
-        newContent.style = "width: 100%; height: 135px;";
-        newContent.innerHTML = div;
-        addTo.appendChild(newContent);
+//articles
+function populateArticles(type, document)
+{
+    temparticles = localStorage.getItem("starredArticles");
+    if (temparticles != null)
+    {
+    starredArticles = JSON.parse(temparticles);
+    }
+
+    if (type == "default")
+    {
+        var code = "";
+        document.getElementById("articles").innerHTML = "";
+        for (var x = articles.length - 1; x >= 0; x -= 1) {
+            if (starredArticles.includes("article" + x))
+            {
+                code = "&#9733;";
+            }
+            else
+            {
+                code = "&#9734;";
+            }
+            var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "    <a class='text-light unselectable' id='article" + x + "' onclick='star(article" + x + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
+            var addTo = document.getElementById("articles");
+            var newContent = document.createElement('div');
+            newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
+            newContent.style = "width: 100%; height: 135px;";
+            newContent.innerHTML = div;
+            addTo.appendChild(newContent);
+        }
+    }
+    else if (type == "starred")
+    {
+        document.getElementById("articles").innerHTML = "";
+        for (var x = starredArticles.length - 1; x >= 0; x -= 1) {
+            var string = starredArticles[x];
+            var index = string.slice(7, string.length);
+            var article = articles[index];
+            var div = "<div style='display: inline-block;'>" + "<img src='" + article.image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + article.description + "    <a class='text-light unselectable' id='article" + index + "' onclick='star(article" + index + ", document);'>&#9733;</a>" + "</p>" + "<a target='_blank' href='" + article.link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
+            var addTo = document.getElementById("articles");
+            var newContent = document.createElement('div');
+            newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
+            newContent.style = "width: 100%; height: 135px;";
+            newContent.innerHTML = div;
+            addTo.appendChild(newContent);
+        }
+    }
+}
+
+function star(articleNum, document)
+{
+    if (starredArticles.includes(articleNum.id))
+    {
+        document.getElementById(articleNum.id).innerHTML = "&#9734;";
+        var index = starredArticles.indexOf(articleNum.id);
+        starredArticles.splice(index);
+
+        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
+    }
+    else
+    {
+        document.getElementById(articleNum.id).innerHTML = "&#9733;";
+        starredArticles.push(articleNum.id);
+
+        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
     }
 }
 
