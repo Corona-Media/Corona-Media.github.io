@@ -87,6 +87,12 @@ var starredArticles = [];
 function start() {
     console.log("This is a work in progress. Please suggest any improvements on the feedback page https://covidkidsonline.com/feedback.html");
     
+    temparticles = localStorage.getItem("starredArticles");
+    if (temparticles != null)
+    {
+    starredArticles = JSON.parse(temparticles);
+    }
+
     //popup for feedback
     setTimeout(function() {
         $("#feedbackpopup").modal('show')
@@ -184,12 +190,6 @@ var link = words[number].link;
 //articles
 function populateArticles(type, document)
 {
-    temparticles = localStorage.getItem("starredArticles");
-    if (temparticles != null)
-    {
-    starredArticles = JSON.parse(temparticles);
-    }
-
     if (type == "default")
     {
         var code = "";
@@ -246,6 +246,37 @@ function star(articleNum, document)
         starredArticles.push(articleNum.id);
 
         localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
+    }
+}
+
+function starArticle(articleNum, document)
+{
+    if (starredArticles.includes(articleNum))
+    {
+        document.getElementById(articleNum).innerHTML = "&#9734;";
+        var index = starredArticles.indexOf(articleNum);
+        starredArticles.splice(index);
+
+        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
+    }
+    else
+    {
+        document.getElementById(articleNum).innerHTML = "&#9733;";
+        starredArticles.push(articleNum);
+
+        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
+    }
+}
+
+function setStarredIcon(articleNum, document)
+{
+    if (starredArticles.includes(articleNum))
+    {
+        document.getElementById(articleNum).innerHTML = "&#9733;";
+    }
+    else
+    {
+        document.getElementById(articleNum).innerHTML = "&#9734;";
     }
 }
 
