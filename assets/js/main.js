@@ -296,12 +296,16 @@ function likeArticle(articleNum, document)
         likedArticles.splice(index);
 
         localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
-
-        var url = "https://ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum;
-        $.ajax({url: url, success: function(result){
-            console.log("unliked");
-            console.log(result);
-        }});
+        
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              console.log(this.responseText);
+              console.log("Unlike Succesful");
+            }
+        };
+        xmlhttp.open("POST", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum, true);
+        xmlhttp.send();
     }
     else
     {
@@ -310,11 +314,15 @@ function likeArticle(articleNum, document)
 
         localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
 
-        var url = "https://ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum;
-        $.ajax({url: url, success: function(result){
-            console.log("liked");
-            console.log(result);
-        }});
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              console.log(this.responseText);
+              console.log("Like Succesful");
+            }
+        };
+        xmlhttp.open("POST", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum, true);
+        xmlhttp.send();
     }
 }
 
