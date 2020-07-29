@@ -81,6 +81,7 @@ var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer 
                ];
 
 var starredArticles = [];
+var likedArticles = [];
 
 
 //Start Function 
@@ -90,7 +91,13 @@ function start() {
     temparticles = localStorage.getItem("starredArticles");
     if (temparticles != null)
     {
-    starredArticles = JSON.parse(temparticles);
+        starredArticles = JSON.parse(temparticles);
+    }
+
+    temparticles = localStorage.getItem("likedArticles");
+    if (temparticles != null)
+    {
+        likedArticles = JSON.parse(temparticles);
     }
 
     //popup for feedback
@@ -277,6 +284,49 @@ function setStarredIcon(articleNum, document)
     else
     {
         document.getElementById(articleNum).innerHTML = "&#9734;";
+    }
+}
+
+function likeArticle(articleNum, document)
+{
+    if (likedArticles.includes(articleNum))
+    {
+        document.getElementById(articleNum).innerHTML = "<i class='far fa-thumbs-up'></i>";
+        var index = likedArticles.indexOf(articleNum);
+        likedArticles.splice(index);
+
+        localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
+
+        var url = "ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum;
+        $.ajax({url: url, success: function(result){
+            console.log("unliked");
+            console.log(result);
+        }});
+    }
+    else
+    {
+        document.getElementById(articleNum).innerHTML = "<i class='fas fa-thumbs-up'></i>";
+        likedArticles.push(articleNum);
+
+        localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
+
+        var url = "ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum;
+        $.ajax({url: url, success: function(result){
+            console.log("liked");
+            console.log(result);
+        }});
+    }
+}
+
+function setLikedIcon(articleNum, document)
+{
+    if (likedArticles.includes(articleNum))
+    {
+        document.getElementById(articleNum).innerHTML = "<i class='fas fa-thumbs-up'></i>";
+    }
+    else
+    {
+        document.getElementById(articleNum).innerHTML = "<i class='far fa-thumbs-up'></i>";
     }
 }
 
