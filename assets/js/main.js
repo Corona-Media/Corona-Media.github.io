@@ -304,7 +304,7 @@ function likeArticle(articleNum, document)
               console.log("Unlike Succesful");
             }
         };
-        xmlhttp.open("POST", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum, true);
+        xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum, true);
         xmlhttp.send();
     }
     else
@@ -321,7 +321,7 @@ function likeArticle(articleNum, document)
               console.log("Like Succesful");
             }
         };
-        xmlhttp.open("POST", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum, true);
+        xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum, true);
         xmlhttp.send();
     }
 }
