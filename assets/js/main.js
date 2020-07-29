@@ -297,7 +297,7 @@ function likeArticle(articleNum, document)
 
         localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
 
-        var url = "ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum;
+        var url = "https://ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum;
         $.ajax({url: url, success: function(result){
             console.log("unliked");
             console.log(result);
@@ -310,7 +310,7 @@ function likeArticle(articleNum, document)
 
         localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
 
-        var url = "ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum;
+        var url = "https://ilan-not-elon-com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum;
         $.ajax({url: url, success: function(result){
             console.log("liked");
             console.log(result);
