@@ -339,7 +339,8 @@ function setLikedIcon(articleNum, document)
 }
 
 
-function indexfunc(document) {
+function indexfunc(document) 
+{
     for (var x = articles.length - 1; x >= (articles.length - 5); x -= 1) {
         var div = "<h6><a class='title2' href='" + articles[x].link + "' target='_blank'>" + articles[x].description +"</a></h6>";
         var addTo = document.getElementById("articleslist");
@@ -363,7 +364,8 @@ function indexfunc(document) {
 }
 
 
-function validatefeedback() {
+function validatefeedback() 
+{
     var inputText = document.forms["feedbackform"]["message"].value;
     if (inputText != "") {
         alert("Thank You For Contacting Us.");
