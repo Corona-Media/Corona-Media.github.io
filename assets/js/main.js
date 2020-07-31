@@ -297,15 +297,7 @@ function likeArticle(articleNum, document)
 
         localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
         
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-              console.log(this.responseText);
-              console.log("Unlike Succesful");
-            }
-        };
-        xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum, true);
-        xmlhttp.send();
+        newWebRequest("https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum);
     }
     else
     {
@@ -314,16 +306,20 @@ function likeArticle(articleNum, document)
 
         localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-              console.log(this.responseText);
-              console.log("Like Succesful");
-            }
-        };
-        xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum, true);
-        xmlhttp.send();
+        newWebRequest("https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum);
     }
+}
+
+function newWebRequest(url)
+{
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          console.log(this.responseText);
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 }
 
 function setLikedIcon(articleNum, document)
@@ -347,10 +343,8 @@ function indexfunc(document)
         var newContent = document.createElement('li');
         newContent.innerHTML = div;
         addTo.appendChild(newContent);
-        
     }
 
-    //home page videos
     var funnyvidid = document.getElementById("funnyvid");
     var happyvidid = document.getElementById("happyvid");
 
