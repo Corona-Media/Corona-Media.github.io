@@ -77,7 +77,8 @@ var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer 
                 {image: "assets/images/corona.png", description: "A Firsthand Account Of A Kid Living Through The Pandemic", link: "assets/articles/kids-corona-experience.html"},
                 {image: "assets/images/camera.jpg", description: "25+ Great Family Friendly Movies To Pass The Time", link: "assets/articles/movie-list.html"},
                 {image: "assets/images/summer-plan.png", description: "How To Plan Your Summer During These Uncertain Times", link: "assets/articles/planning-summer.html"},
-                {image: "assets/images/course-site.png", description: "The 3 Best Online Course Sites", link: "assets/articles/online-course.html"}
+                {image: "assets/images/course-site.png", description: "The 3 Best Online Course Sites", link: "assets/articles/online-course.html"},
+                {image: "assets/images/playdate.jpeg", description: "Is it safe for kids to have playdates?", link: "assets/articles/playdates-safe.html"}
                ];
 
 var starredArticles = [];
