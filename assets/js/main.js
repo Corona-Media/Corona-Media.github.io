@@ -236,7 +236,49 @@ function populateArticles(type, document)
             addTo.appendChild(newContent);
         }
     }
+    else if (type == "popular")
+    {
+        var tempArticleList = {};
+        document.getElementById("articles").innerHTML = "";
+        for (var x = articles.length - 1; x >= 0; x -= 1)
+        {
+            likes = 0;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    likes = this.responseText;
+                } 
+            }; 
+            xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=getLikes&article=like" + x, false);
+            xmlhttp.send();
+            if (likes == "")
+            {
+                likes = 0;
+            }
+            tempArticleList.push({x, likes});
+        }
+        tempArticleList.sort();
+
+        for (var x = tempArticleList.length - 1; x >= 0; x -= 1) {
+            if (starredArticles.includes("article" + x))
+            {
+                code = "&#9733;";
+            }
+            else
+            {
+                code = "&#9734;";
+            }
+            var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "    <a class='text-light unselectable' id='article" + x + "' onclick='star(article" + x + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
+            var addTo = document.getElementById("articles");
+            var newContent = document.createElement('div');
+            newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
+            newContent.style = "width: 100%; height: 135px;";
+            newContent.innerHTML = div;
+            addTo.appendChild(newContent);
+        }
+    }
 }
+
 
 function star(articleNum, document)
 {
