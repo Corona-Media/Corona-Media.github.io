@@ -242,7 +242,7 @@ function populateArticles(type, document)
         document.getElementById("articles").innerHTML = "";
         for (var x = articles.length - 1; x >= 0; x -= 1)
         {
-            likes = 0;
+            likes = "0";
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -253,7 +253,7 @@ function populateArticles(type, document)
             xmlhttp.send();
             if (likes == "")
             {
-                likes = 0;
+                likes = "0";
             }
             likesList.push(likes);
         }
@@ -262,6 +262,7 @@ function populateArticles(type, document)
         tempNum2 = likesList.indexOf(tempNum);
 
         for (var x = tempNum2 - 1; x >= 0; x -= 1) {
+            console.log("loopRound" + x);
             if (starredArticles.includes("article" + x))
             {
                 code = "&#9733;";
