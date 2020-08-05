@@ -255,7 +255,7 @@ function populateArticles(type, document)
             {
                 likes = 0;
             }
-            likesList.push(likes + "-" + x);
+            likesList.push(likes);
         }
         console.log(likesList);
         tempNum = Math.max(likesList);
