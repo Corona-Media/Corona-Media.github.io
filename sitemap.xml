@@ -60,4 +60,8 @@
 	<loc>https://covidkidsonline.com/assets/articles/online-course.html</loc>
 	<priority>0.3</priority>
 </url>
+<url>
+	<loc>https://covidkidsonline.com/assets/articles/playdates-safe.html</loc>
+	<priority>0.3</priority>
+</url>
 </urlset>
