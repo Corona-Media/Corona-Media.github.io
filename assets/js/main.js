@@ -259,6 +259,7 @@ function populateArticles(type, document)
         }
         console.log(likesList);
         tempNum = Math.max(likesList);
+        console.log(tempNum);
         tempNum2 = likesList.indexOf(tempNum);
         console.log(tempNum2);
         for (var x = tempNum2 - 1; x >= 0; x -= 1) {
