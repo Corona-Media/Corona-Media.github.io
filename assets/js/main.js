@@ -238,7 +238,7 @@ function populateArticles(type, document)
     }
     else if (type == "popular")
     {
-        var tempArticleList = {};
+        var likesList = [];
         document.getElementById("articles").innerHTML = "";
         for (var x = articles.length - 1; x >= 0; x -= 1)
         {
@@ -255,11 +255,12 @@ function populateArticles(type, document)
             {
                 likes = 0;
             }
-            tempArticleList.push({x, likes});
+            likesList.push(likes + "-" + x);
         }
-        tempArticleList.sort();
+        tempNum = Math.max(likesList);
+        tempNum2 = likesList.indexOf(tempNum);
 
-        for (var x = tempArticleList.length - 1; x >= 0; x -= 1) {
+        for (var x = tempNum2 - 1; x >= 0; x -= 1) {
             if (starredArticles.includes("article" + x))
             {
                 code = "&#9733;";
@@ -275,6 +276,10 @@ function populateArticles(type, document)
             newContent.style = "width: 100%; height: 135px;";
             newContent.innerHTML = div;
             addTo.appendChild(newContent);
+            
+            likesList.splice(x);
+            tempNum = Math.max(likesList);
+            tempNum2 = likesList.indexOf(tempNum);
         }
     }
 }
