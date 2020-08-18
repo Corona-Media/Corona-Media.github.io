@@ -259,10 +259,10 @@ function populateArticles(type, document)
         }
         likesListOrganized = likesList.sort((a, b) => b - a);
         for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
-            x = findIndex(likesListOrganized[x], likesList);
             console.log(likesListOrganized);
-            veryTempVar = likesListOrganized.length - x;
-            likesListOrganized.splice(veryTempVar);
+            x = findIndex(likesListOrganized[x], likesList);
+            //veryTempVar = likesListOrganized.length - x;
+            likesListOrganized.pop();
             console.log(likesListOrganized);
             if (starredArticles.includes("article" + x))
             {
