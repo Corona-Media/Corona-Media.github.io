@@ -258,9 +258,10 @@ function populateArticles(type, document)
             likesList.push(likes);
         }
         likesListOrganized = likesList.sort((a, b) => b - a);
-        for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
+        likesListOrganizedCopy = likesListOrganized;
+        for (var x = likesListOrganizedCopy.length - 1; x >= 0; x -= 1) {
             x = findIndex(likesListOrganized[x], likesList);
-            likesListOrganized.pop(x);
+            likesListOrganized.splice(x);
             console.log(likesListOrganized);
             if (starredArticles.includes("article" + x))
             {
