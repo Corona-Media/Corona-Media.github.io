@@ -260,6 +260,7 @@ function populateArticles(type, document)
         likesListOrganized = likesList.sort((a, b) => b - a);
         for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
             x = findIndex(likesListOrganized[x], likesList);
+            console.log(likesListOrganized);
             likesListOrganized.splice(x);
             console.log(likesListOrganized);
             if (starredArticles.includes("article" + x))
