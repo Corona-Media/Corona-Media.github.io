@@ -257,11 +257,11 @@ function populateArticles(type, document)
             }
             likesList.push(likes);
         }
-        likesListOrganized = likesList.sort();
+        likesListOrganized = likesList.sort((a, b) => b - a);
         console.log(likesListOrganized);
         for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
             x = findIndex(likesListOrganized[x], likesList);
-            likesList.pop(x);
+            likesListOrganized.pop(x);
             if (starredArticles.includes("article" + x))
             {
                 code = "&#9733;";
