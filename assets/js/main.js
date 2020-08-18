@@ -257,7 +257,7 @@ function populateArticles(type, document)
             }
             likesList.push(likes);
         }
-        likesListOrganized = likesList.sort((a, b) => b - a);
+        var likesListOrganized = likesList.sort((a, b) => b - a);
         for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
             console.log(likesListOrganized);
             x = findIndex(likesListOrganized[x], likesList);
