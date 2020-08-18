@@ -261,7 +261,8 @@ function populateArticles(type, document)
         for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
             x = findIndex(likesListOrganized[x], likesList);
             console.log(likesListOrganized);
-            likesListOrganized.splice(x);
+            veryTempVar = likesListOrganized.length - x;
+            likesListOrganized.splice(veryTempVar);
             console.log(likesListOrganized);
             if (starredArticles.includes("article" + x))
             {
