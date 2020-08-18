@@ -255,6 +255,7 @@ function populateArticles(type, document)
             {
                 likes = "0";
             }
+            console.log(likes);
             likesList.push(likes);
         }
         likesListOrganized = likesList.sort();
