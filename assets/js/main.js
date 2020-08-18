@@ -255,10 +255,10 @@ function populateArticles(type, document)
             {
                 likes = "0";
             }
-            console.log(likes);
             likesList.push(likes);
         }
         likesListOrganized = likesList.sort();
+        console.log(likesListOrganized);
         for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
             x = findIndex(likesListOrganized[x], likesList);
             likesList.pop(x);
