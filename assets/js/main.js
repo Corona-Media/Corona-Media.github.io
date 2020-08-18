@@ -251,7 +251,7 @@ function populateArticles(type, document)
             }; 
             xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=getLikes&article=like" + x, false);
             xmlhttp.send();
-            if (likes == "")
+            if (likes == "" || likes == null)
             {
                 likes = "0";
             }
