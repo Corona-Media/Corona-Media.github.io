@@ -270,7 +270,8 @@ function populateArticles(type, document)
             newContent.style = "width: 100%; height: 135px;";
             newContent.innerHTML = div;
             addTo.appendChild(newContent);
-            //likesList.splice(x);
+            likesList.pop();
+            //.splice(x);
         }
     }
 }
