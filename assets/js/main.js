@@ -258,12 +258,12 @@ function populateArticles(type, document)
         likesListOrganized.sort((a, b) => b - a);
         for (var z = 0; z < likesListOrganized.length; z++) {
             console.log(z);
-            z = findIndex(likesListOrganized[z], likesList);
-            console.log(z);
+            ind = findIndex(likesListOrganized[z], likesList);
+            console.log(ind);
             console.log(likesList);
-            if (starredArticles.includes("article" + z)) code = "&#9733;";
+            if (starredArticles.includes("article" + ind)) code = "&#9733;";
             else code = "&#9734;";
-            var div = "<div style='display: inline-block;'>" + "<img src='" + articles[z].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[z].description + "    <a class='text-light unselectable' id='article" + x + "' onclick='star(article" + z + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[z].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
+            var div = "<div style='display: inline-block;'>" + "<img src='" + articles[ind].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + ind + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[ind].description + "    <a class='text-light unselectable' id='article" + ind + "' onclick='star(article" + ind + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[ind].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
             var addTo = document.getElementById("articles");
             var newContent = document.createElement('div');
             newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
