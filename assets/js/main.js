@@ -256,10 +256,9 @@ function populateArticles(type, document)
         }
         var likesListOrganized = likesList.sort((a, b) => b - a);
         for (var x = 0; x < likesListOrganized.length; x++) {
-            console.log(likesListOrganized);
             x = findIndex(likesListOrganized[x], likesList);
+            likesList.splice(x);
             likesListOrganized.pop();
-            console.log(likesListOrganized);
             if (starredArticles.includes("article" + x)) code = "&#9733;";
             else code = "&#9734;";
             var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "    <a class='text-light unselectable' id='article" + x + "' onclick='star(article" + x + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
