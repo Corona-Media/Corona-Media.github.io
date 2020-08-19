@@ -255,7 +255,7 @@ function populateArticles(type, document)
             likesList.push(likes);
         }
         var likesListOrganized = likesList.sort((a, b) => b - a);
-        for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
+        for (var x = 0; x < likesListOrganized.length; x++) {
             console.log(likesListOrganized);
             x = findIndex(likesListOrganized[x], likesList);
             likesListOrganized.pop();
@@ -269,7 +269,6 @@ function populateArticles(type, document)
             newContent.style = "width: 100%; height: 135px;";
             newContent.innerHTML = div;
             addTo.appendChild(newContent);
-            console.log("end of loop: " + likesListOrganized);
         }
     }
 }
