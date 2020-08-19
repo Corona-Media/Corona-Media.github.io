@@ -257,10 +257,7 @@ function populateArticles(type, document)
         var likesListOrganized = likesList.concat();
         likesListOrganized.sort((a, b) => b - a);
         for (var z = 0; z < likesListOrganized.length; z++) {
-            console.log(z);
             ind = findIndex(likesListOrganized[z], likesList);
-            console.log(ind);
-            console.log(likesList);
             if (starredArticles.includes("article" + ind)) code = "&#9733;";
             else code = "&#9734;";
             var div = "<div style='display: inline-block;'>" + "<img src='" + articles[ind].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + ind + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[ind].description + "    <a class='text-light unselectable' id='article" + ind + "' onclick='star(article" + ind + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[ind].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
@@ -270,8 +267,7 @@ function populateArticles(type, document)
             newContent.style = "width: 100%; height: 135px;";
             newContent.innerHTML = div;
             addTo.appendChild(newContent);
-            likesList.pop();
-            //.splice(z);
+            likesList.splice(ind);
         }
     }
 }
