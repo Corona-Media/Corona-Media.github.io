@@ -253,6 +253,7 @@ function populateArticles(type, document)
             xmlhttp.send();
             if (likes == "" || likes == null) likes = "0";
             likesList.push(likes);
+            console.log(likesList);
         }
         var likesListOrganized = likesList;
         likesListOrganized.sort((a, b) => b - a);
