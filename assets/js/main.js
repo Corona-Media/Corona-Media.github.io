@@ -251,27 +251,17 @@ function populateArticles(type, document)
             }; 
             xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=getLikes&article=like" + x, false);
             xmlhttp.send();
-            if (likes == "" || likes == null)
-            {
-                likes = "0";
-            }
+            if (likes == "" || likes == null) likes = "0";
             likesList.push(likes);
         }
         var likesListOrganized = likesList.sort((a, b) => b - a);
         for (var x = likesListOrganized.length - 1; x >= 0; x -= 1) {
             console.log(likesListOrganized);
             x = findIndex(likesListOrganized[x], likesList);
-            //veryTempVar = likesListOrganized.length - x;
             likesListOrganized.pop();
             console.log(likesListOrganized);
-            if (starredArticles.includes("article" + x))
-            {
-                code = "&#9733;";
-            }
-            else
-            {
-                code = "&#9734;";
-            }
+            if (starredArticles.includes("article" + x)) code = "&#9733;";
+            else code = "&#9734;";
             var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "    <a class='text-light unselectable' id='article" + x + "' onclick='star(article" + x + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
             var addTo = document.getElementById("articles");
             var newContent = document.createElement('div');
@@ -279,10 +269,6 @@ function populateArticles(type, document)
             newContent.style = "width: 100%; height: 135px;";
             newContent.innerHTML = div;
             addTo.appendChild(newContent);
-            
-            likesList.splice(x);
-            tempNum = Math.max(likesList);
-            tempNum2 = likesList.indexOf(tempNum);
             console.log("end of loop: " + likesListOrganized);
         }
     }
@@ -292,10 +278,7 @@ function findIndex(key, list)
 {
     for (x = 0; x < list.length; x++)
     {
-        if (list[x] == key)
-        {
-            return x;
-        }
+        if (list[x] == key) return x;
     }
 }
 
