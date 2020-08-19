@@ -253,7 +253,6 @@ function populateArticles(type, document)
             xmlhttp.send();
             if (likes == "" || likes == null) likes = "0";
             likesList.push(likes);
-            console.log(likesList);
         }
         var likesListOrganized = likesList.concat();
         likesListOrganized.sort((a, b) => b - a);
@@ -261,7 +260,6 @@ function populateArticles(type, document)
             x = findIndex(likesListOrganized[x], likesList);
             console.log(likesList);
             likesList.splice(x);
-            likesListOrganized.pop();
             console.log(likesList);
             if (starredArticles.includes("article" + x)) code = "&#9733;";
             else code = "&#9734;";
