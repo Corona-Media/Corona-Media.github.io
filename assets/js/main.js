@@ -254,9 +254,12 @@ function populateArticles(type, document)
             if (likes == "" || likes == null) likes = "0";
             likesList.push(likes);
         }
+        var templist = likesList
         var likesListOrganized = likesList.sort((a, b) => b - a);
+        likesList = templist;
         for (var x = 0; x < likesListOrganized.length; x++) {
             x = findIndex(likesListOrganized[x], likesList);
+            console.log(likesList);
             likesList.splice(x);
             likesListOrganized.pop();
             console.log(likesList);
