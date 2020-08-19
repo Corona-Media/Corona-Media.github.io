@@ -261,7 +261,6 @@ function populateArticles(type, document)
             x = findIndex(likesListOrganized[x], likesList);
             console.log(x);
             console.log(likesList);
-            console.log(likesList);
             if (starredArticles.includes("article" + x)) code = "&#9733;";
             else code = "&#9734;";
             var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "    <a class='text-light unselectable' id='article" + x + "' onclick='star(article" + x + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
@@ -271,7 +270,7 @@ function populateArticles(type, document)
             newContent.style = "width: 100%; height: 135px;";
             newContent.innerHTML = div;
             addTo.appendChild(newContent);
-            likesList.splice(x);
+            //likesList.splice(x);
         }
     }
 }
