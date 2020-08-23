@@ -240,7 +240,7 @@ function populateArticles(type, document)
     {
         var likesList = [];
         document.getElementById("articles").innerHTML = "";
-        for (var x = articles.length - 1; x >= 0; x -= 1)
+        for (var x = 0; x < articles.length; x++)
         {
             likes = "0";
             var xmlhttp = new XMLHttpRequest();
