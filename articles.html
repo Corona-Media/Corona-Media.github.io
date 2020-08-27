@@ -22,14 +22,14 @@
         <meta name='description' content='A site for kids, by kids, to help keep kids busy, informed, and content while stuck at home.'>
     </head>
 
-    <body onload="start(); populateArticles('default', document);">
+    <body onload="loadArticles();">
         <script type="text/javascript" src="assets/includes/header.js"></script>
         <br><br><br>
         <div class="container-fluid text-center">
             <div class="bg-dark pt-2 mt-2 mb-2 rounded mx-auto text-light" style="width: 100%; height: 52px;">
-                <button class="float-left btn btn-light ml-2 mr-2 mb-2" onclick="populateArticles('default', document);">All</button>
-                <button class="float-left btn btn-light ml-1 mr-2 mb-2" onclick="populateArticles('popular', document);">Popular</button>
-                <button class="float-left btn btn-light ml-1 mr-2 mb-2" onclick="populateArticles('starred', document);">Starred</button>
+                <button class="float-left btn btn-light ml-2 mr-2 mb-2" onclick="populateArticles('default');">All</button>
+                <button class="float-left btn btn-light ml-1 mr-2 mb-2" onclick="populateArticles('popular');">Popular</button>
+                <button class="float-left btn btn-light ml-1 mr-2 mb-2" onclick="populateArticles('starred');">Starred</button>
             </div>
             
             <div class="col" id="articles">
@@ -38,6 +38,7 @@
         </div>
 
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/articles.js"></script>
 
         <script>
             if ('serviceWorker' in navigator) {

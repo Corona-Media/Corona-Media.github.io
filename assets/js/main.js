@@ -71,14 +71,14 @@ var funnyvid = videos[0];
 var happyvid = videos[4];
 
 //Article Variables
-var articles = [{image: "assets/images/dc.jpeg", description: "Hawthorne Summer Camp Is 3D Printing Face Shields For Frontline Workers", link: "assets/articles/discover-camp.html"},
-                {image: "assets/images/book-list.jpg", description: "20+ Great Books For Kids To Read While Stuck At Home", link: "assets/articles/book-list.html"},
-                {image: "assets/images/puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"},
-                {image: "assets/images/corona.png", description: "A Firsthand Account Of A Kid Living Through The Pandemic", link: "assets/articles/kids-corona-experience.html"},
-                {image: "assets/images/camera.jpg", description: "25+ Great Family Friendly Movies To Pass The Time", link: "assets/articles/movie-list.html"},
-                {image: "assets/images/summer-plan.png", description: "How To Plan Your Summer During These Uncertain Times", link: "assets/articles/planning-summer.html"},
-                {image: "assets/images/course-site.png", description: "The 3 Best Online Course Sites", link: "assets/articles/online-course.html"},
-                {image: "assets/images/playdate.jpeg", description: "Is it safe for kids to have playdates?", link: "assets/articles/playdates-safe.html"}
+var articles = [{image: "dc.jpeg", description: "Hawthorne Summer Camp Is 3D Printing Face Shields For Frontline Workers", link: "assets/articles/discover-camp.html"},
+                {image: "book-list.jpg", description: "20+ Great Books For Kids To Read While Stuck At Home", link: "assets/articles/book-list.html"},
+                {image: "puzzle.jpg", description: "30+ Activities to keep you busy while bored at home", link: "assets/articles/activities-list.html"},
+                {image: "corona.png", description: "A Firsthand Account Of A Kid Living Through The Pandemic", link: "assets/articles/kids-corona-experience.html"},
+                {image: "camera.jpg", description: "25+ Great Family Friendly Movies To Pass The Time", link: "assets/articles/movie-list.html"},
+                {image: "summer-plan.png", description: "How To Plan Your Summer During These Uncertain Times", link: "assets/articles/planning-summer.html"},
+                {image: "course-site.png", description: "The 3 Best Online Course Sites", link: "assets/articles/online-course.html"},
+                {image: "playdate.jpeg", description: "Is it safe for kids to have playdates?", link: "assets/articles/playdates-safe.html"}
                ];
 
 var starredArticles = [];
@@ -88,18 +88,6 @@ var likedArticles = [];
 //Start Function 
 function start() {
     console.log("This is a work in progress. Please suggest any improvements on the feedback page https://covidkidsonline.com/feedback.html");
-    
-    temparticles = localStorage.getItem("starredArticles");
-    if (temparticles != null)
-    {
-        starredArticles = JSON.parse(temparticles);
-    }
-
-    temparticles = localStorage.getItem("likedArticles");
-    if (temparticles != null)
-    {
-        likedArticles = JSON.parse(temparticles);
-    }
 
     //popup for feedback
     setTimeout(function() {
@@ -195,165 +183,6 @@ var link = words[number].link;
 }
 
 
-//articles
-function populateArticles(type, document)
-{
-    if (type == "default")
-    {
-        var code = "";
-        document.getElementById("articles").innerHTML = "";
-        for (var x = articles.length - 1; x >= 0; x -= 1) {
-            if (starredArticles.includes("article" + x))
-            {
-                code = "&#9733;";
-            }
-            else
-            {
-                code = "&#9734;";
-            }
-            var div = "<div style='display: inline-block;'>" + "<img src='" + articles[x].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[x].description + "    <a class='text-light unselectable' id='article" + x + "' onclick='star(article" + x + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[x].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
-            var addTo = document.getElementById("articles");
-            var newContent = document.createElement('div');
-            newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
-            newContent.style = "width: 100%; height: 135px;";
-            newContent.innerHTML = div;
-            addTo.appendChild(newContent);
-        }
-    }
-    else if (type == "starred")
-    {
-        document.getElementById("articles").innerHTML = "";
-        for (var x = starredArticles.length - 1; x >= 0; x -= 1) {
-            var string = starredArticles[x];
-            var index = string.slice(7, string.length);
-            var article = articles[index];
-            var div = "<div style='display: inline-block;'>" + "<img src='" + article.image + "' height='120px' class='ml-2' style='float: left;' alt='img" + x + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + article.description + "    <a class='text-light unselectable' id='article" + index + "' onclick='star(article" + index + ", document);'>&#9733;</a>" + "</p>" + "<a target='_blank' href='" + article.link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
-            var addTo = document.getElementById("articles");
-            var newContent = document.createElement('div');
-            newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
-            newContent.style = "width: 100%; height: 135px;";
-            newContent.innerHTML = div;
-            addTo.appendChild(newContent);
-        }
-    }
-    else if (type == "popular")
-    {
-        var likesList = [];
-        document.getElementById("articles").innerHTML = "";
-        for (var x = 0; x < articles.length; x++)
-        {
-            likes = "0";
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    likes = this.responseText;
-                } 
-            }; 
-            xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=getLikes&article=like" + x, false);
-            xmlhttp.send();
-            if (likes == "" || likes == null) likes = "0";
-            likesList.push(likes);
-        }
-        var likesListOrganized = likesList.concat();
-        likesListOrganized.sort((a, b) => b - a);
-        for (var z = 0; z < likesListOrganized.length; z++)
-        {
-            ind = findIndex(likesListOrganized[z], likesList);
-            if (starredArticles.includes("article" + ind)) code = "&#9733;";
-            else code = "&#9734;";
-            var div = "<div style='display: inline-block;'>" + "<img src='" + articles[ind].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + ind + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[ind].description + "    <a class='text-light unselectable' id='article" + ind + "' onclick='star(article" + ind + ", document);'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[ind].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
-            var addTo = document.getElementById("articles");
-            var newContent = document.createElement('div');
-            newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
-            newContent.style = "width: 100%; height: 135px;";
-            newContent.innerHTML = div;
-            addTo.appendChild(newContent);
-            likesList[ind] = null;
-        }
-    }
-}
-
-function findIndex(key, list)
-{
-    for (x = 0; x < list.length; x++)
-    {
-        if (list[x] == key) return x;
-    }
-}
-
-
-function star(articleNum, document)
-{
-    if (starredArticles.includes(articleNum.id))
-    {
-        document.getElementById(articleNum.id).innerHTML = "&#9734;";
-        var index = starredArticles.indexOf(articleNum.id);
-        starredArticles.splice(index);
-
-        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
-    }
-    else
-    {
-        document.getElementById(articleNum.id).innerHTML = "&#9733;";
-        starredArticles.push(articleNum.id);
-
-        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
-    }
-}
-
-function starArticle(articleNum, document)
-{
-    if (starredArticles.includes(articleNum))
-    {
-        document.getElementById(articleNum).innerHTML = "&#9734;";
-        var index = starredArticles.indexOf(articleNum);
-        starredArticles.splice(index);
-
-        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
-    }
-    else
-    {
-        document.getElementById(articleNum).innerHTML = "&#9733;";
-        starredArticles.push(articleNum);
-
-        localStorage.setItem("starredArticles", JSON.stringify(starredArticles));
-    }
-}
-
-function setStarredIcon(articleNum, document)
-{
-    if (starredArticles.includes(articleNum))
-    {
-        document.getElementById(articleNum).innerHTML = "&#9733;";
-    }
-    else
-    {
-        document.getElementById(articleNum).innerHTML = "&#9734;";
-    }
-}
-
-function likeArticle(articleNum, document)
-{
-    if (likedArticles.includes(articleNum))
-    {
-        document.getElementById(articleNum).innerHTML = "<i class='far fa-thumbs-up'></i>";
-        var index = likedArticles.indexOf(articleNum);
-        likedArticles.splice(index);
-
-        localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
-        
-        newWebRequest("https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + articleNum);
-    }
-    else
-    {
-        document.getElementById(articleNum).innerHTML = "<i class='fas fa-thumbs-up'></i>";
-        likedArticles.push(articleNum);
-
-        localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
-
-        newWebRequest("https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + articleNum);
-    }
-}
 
 function newWebRequest(url)
 {
@@ -365,18 +194,6 @@ function newWebRequest(url)
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-}
-
-function setLikedIcon(articleNum, document)
-{
-    if (likedArticles.includes(articleNum))
-    {
-        document.getElementById(articleNum).innerHTML = "<i class='fas fa-thumbs-up'></i>";
-    }
-    else
-    {
-        document.getElementById(articleNum).innerHTML = "<i class='far fa-thumbs-up'></i>";
-    }
 }
 
 
