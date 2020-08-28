@@ -103,7 +103,7 @@ function videosfunc(document) {
         var div = "<center>" + "<iframe class='card-body' width='100%' height='300px' src='" + videos[x] + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" + "</center>";
         var addTo = document.getElementById("vids");
         var newContent = document.createElement('div');
-        newContent.className = "card bg-dark text-center mr-3 ml-3  rounded mt-4 mb-3 mx-auto";
+        newContent.className = "card bg-dark text-center mr-3 ml-3 mt-4 mb-3 mx-auto";
         newContent.style = "width:  500px;";
         newContent.innerHTML = div;
         addTo.appendChild(newContent);
@@ -118,7 +118,7 @@ function artworkfunc(document) {
         var div = "<center>" + "<img id='img1' src='" + artwork[x1].files[0] + "' width='90%' data-toggle='tooltip' title='Artwork By " + artwork[x1].by + "' alt='" + artwork[x1].by + "art'>" + "</center>"  
         var addTo = document.getElementById("art");
         var newContent = document.createElement('div');
-        newContent.className = "card bg-dark pt-2 mt-5 mb-3 rounded mx-auto mobile";
+        newContent.className = "card bg-dark pt-2 mt-5 mb-3 mx-auto mobile";
         newContent.style = "width: 400px; height: 530px;";
         newContent.setAttribute("onclick", "popup(this)");
         newContent.setAttribute("id", String(x1));
