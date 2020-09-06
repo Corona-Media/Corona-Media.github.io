@@ -23,7 +23,7 @@
         <meta name='description' content='A site for kids, by kids, to help keep kids busy, informed, and content while stuck at home.'>
   </head>
 
-  <body onload="artworkfunc(document); start();">
+  <body onload="artworkfunc();">
         <script type="text/javascript" src="assets/includes/header.js"></script>
         <br><br>
         <div class="container-fluid text-center">
@@ -40,15 +40,53 @@
 
         <script>
             if ('serviceWorker' in navigator) {
-              window.addEventListener('load', () => {
-                  navigator.serviceWorker.register('/sw.js')
-                      .then(reg => {
-                          console.log('Regestered!', reg);
-                      }).catch(err => {
-                          console.log('Registration Failed: ', err);
-                      });
-                  });
-              }
-          </script>
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(reg => {
+                            console.log('Regestered!', reg);
+                        }).catch(err => {
+                            console.log('Registration Failed: ', err);
+                        });
+                });
+            }
+
+            function artworkfunc()
+            {
+                start();
+                for (let x1 in artwork) {
+                    let div = `<center><img id='img1' src='${artwork[x1].files[0]}' width='90%' data-toggle='tooltip' title='Artwork By ${artwork[x1].by}' alt='${artwork[x1].by}art'></center>`;
+                    let addTo = document.getElementById("art");
+                    let newContent = document.createElement('div');
+                    newContent.className = "card bg-dark pt-2 mt-5 mb-3 mx-auto mobile";
+                    newContent.style = "width: 400px; height: 530px;";
+                    newContent.setAttribute("onclick", "popup(this)");
+                    newContent.id = x1;
+                    newContent.innerHTML = div;
+                    addTo.appendChild(newContent);
+                    
+                    let images = [];
+                    for (let x2 in artwork[x1].files) {
+                        images.push(`<img src="${artwork[x1].files[x2]}" width="90%;" alt="img${x2}">`)
+                    }
+                    
+                    let modalele = `<div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title' id='model${x1}Label'>Artwork By ${artwork[x1].by}</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>x</span></button></div><div class='modal-body'><center>${images.toString()}</center></div><div class='modal-footer'><button type='button' class='btn btn-dark' data-dismiss='modal'>Close</button></div></div></div></div>`;
+                    
+                    let addToModal = document.getElementById("modals");
+                    let newContentModal = document.createElement("div");
+                    newContentModal.className = "modal fade";
+                    newContentModal.id = `model${x1}`;
+                    newContentModal.setAttribute("role", "dialog");
+                    newContentModal.setAttribute("aria-labelledby", `model${x1}Label`);
+                    newContentModal.setAttribute("aria-hidden", "true");
+                    newContentModal.tabIndex = "-1";
+                    newContentModal.innerHTML = modalele;
+                    addToModal.appendChild(newContentModal);
+                }
+            }
+            function popup(thus) {
+                let modalnum = `#model${thus.id}`
+                $(modalnum).modal('show');
+            }
+        </script>
   </body>
 </html>

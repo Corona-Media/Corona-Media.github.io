@@ -2,12 +2,12 @@
   <head>
     <title>Covid Kids - Activities For Kids Stuck At Home</title>
     <script type="text/javascript" src="assets/includes/head.js"></script>
+    <link rel="canonical" href="index.html">
     <meta name="url" content="https://covidkidsonline.com/index.html"> 
     <meta name="owner" content="Ilan">
     <meta name="designer" content="Ilan">
     <meta name="subject" content="a hub for kids stuck at home, Activities For Kids Stuck At Home, Things to do while stuck at home, activities for kids in home, kid activities at home, fun activities, fun things to do for kids at home, activities for kids to do">
     <meta name="keywords" content="covid kids, covid kids online, corona media, kids stuck at home, keep kids busy at home, kids activities, activities for kids in home, kid activities at home, fun activities, fun things to do for kids at home, activities for kids to do">
-    <link rel="canonical" href="index.html">
     <meta name="robots" content="index, follow">
     <meta name="og:url" content="https://covidkidsonline.com">
     <meta name="twitter:url" content="https://covidkidsonline.com">
@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#5F9EA0">
   </head>
 
-  <body onload="start(); indexfunc(document);">
+  <body onload="indexfunc();">
     <script type="text/javascript" src="assets/includes/header.js"></script>
     <br><br>
     <div class="container-fluid">
@@ -44,7 +44,7 @@
             <div class="card bg-dark mr-3 ml-3 pt-2 mt-4 mb-3 rounded div mx-auto" style="width: 500px; height: 400px;">
                 <center>
                     <h2 class="text-light">Fun Activities</h2>
-                    <div class="p-3 mb-3" style="width: 90%; height: 300px;" onclick="ideasfunc(document)">
+                    <div class="p-3 mb-3" style="width: 90%; height: 300px;" onclick="ideasfunc()">
                         <h6 class="text-light">Click To Generate A Random Activity!</h6>
                         <br>
                         <h3 class="text-center text-light mt-5" id="text"></h3>
@@ -117,21 +117,24 @@
                         <img src="assets/artwork/0/3.jpg" width="90%;" alt="artwork3">
                         <img src="assets/artwork/0/4.jpg" width="90%;" alt="artwork4">
                         <img src="assets/artwork/0/5.jpg" width="90%;" alt="artwork5">
-                    </center></div><div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-      </div>
+    </div>
       
+    <script src="assets/js/main.js"></script>
     <script> 
-        var settings = {
+        const settings = {
           "url": "https://api.covid19api.com/world/total",
           "method": "GET",
           "timeout": 0,
         };
 
-        $.ajax(settings).done(function (response) {
+        $.ajax(settings).done((response) => {
             $("#total").text(response.TotalRecovered + " People Have Recovered From Covid-19.");
         });
 
@@ -145,8 +148,54 @@
                 });
             });
         }
-    </script>
+        
+        function popupindex() {
+            let modalnum = "#model00"
+            $(modalnum).modal('show');
+        }
 
-    <script src="assets/js/main.js"></script>
+        function indexfunc() 
+        {
+            start();
+
+            for (let x = articles.length - 1; x >= (articles.length - 5); x -= 1) {
+                let div = `<h6><a class='title2' href='${articles[x].link}' target='_blank'>${articles[x].description}</a></h6>`;
+                let addTo = document.getElementById("articleslist");
+                let newContent = document.createElement('li');
+                newContent.innerHTML = div;
+                addTo.appendChild(newContent);
+            }
+
+            let funnyvidid = document.getElementById("funnyvid");
+            let happyvidid = document.getElementById("happyvid");
+
+            funnyvidid.setAttribute("src", funnyvid);
+            funnyvidid.setAttribute("width", "90%");
+            funnyvidid.setAttribute("height", "300px");
+
+            happyvidid.setAttribute("src", happyvid);
+            happyvidid.setAttribute("width", "90%");
+            happyvidid.setAttribute("height", "300px");
+        }
+
+        function ideasfunc()
+        {
+            const link = document.getElementById("link");
+            link.innerHTML = "I want to try this.";
+
+            let randIndex = Math.floor(Math.random() * words.length);
+
+            let word = words[randIndex].name;
+            document.getElementById("text").innerHTML = word;
+
+            let linkvar = words[randIndex].link;
+            if (linkvar != null) link.href = linkvar;
+            else
+            {
+                link.removeAttribute("href");
+                link.innerHTML = "";
+            }
+        }
+    </script>
   </body>
 </html>

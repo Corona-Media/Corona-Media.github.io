@@ -10,29 +10,41 @@
     <script type="text/javascript" src="assets/includes/header.js"></script>
     <br><br>
     <br><br>
-      <center>
-        <hr>
-        <br>
-        <h2>Feedback</h2>
-        <p class="ml-2 mr-2">Let us know here if you have any feedback for improvements to this website. you can also submit it by emailing us at <a href="mailto:feedback@covidkidsonline.com" class="text-dark">feedback@covidkidsonline.com</a></p>
-        <br>
-        <form name="feedbackform" onsubmit="return validatefeedback();" method="POST" action="https://ilan-not-elon.com/Covid-Kids/feedback.php">
-            <textarea id="input" type="text" name="message" placeholder="Messsage" class="textarea"></textarea>
-            <input value="Submit" type="submit" class="btn btn-light mt-2"></input>
-        </form>
-        <hr>
-        <br>
-        <h2>Submissions</h2>
-        <p>All artwork and articles on this site are by kids. If you have any kid-made artwork or articles please email it to us at <a href="mailto:submissions@covidkidsonline.com" class="text-dark">submissions@covidkidsonline.com</a></p>
-        <br>
-        <hr>
-        <br>
-        <h2>Anything Else</h2>
-        <p>If your message does not fit into one of the above catagories please email us at <a href="mailto:info@covidkidsonline.com" class="text-dark">info@covidkidsonline.com</a></p>
-        <br>
-        <hr>
-      </center>
+    <center>
+      <hr>
+      <br>
+      <h2>Feedback</h2>
+      <p class="ml-2 mr-2">Let us know here if you have any feedback for improvements to this website. you can also submit it by emailing us at <a href="mailto:feedback@covidkidsonline.com" class="text-dark">feedback@covidkidsonline.com</a></p>
+      <br>
+      <form name="feedbackform" onsubmit="return validatefeedback();" method="POST" action="https://ilan-not-elon.com/Covid-Kids/feedback.php">
+      <textarea id="input" type="text" name="message" placeholder="Messsage" class="textarea"></textarea>
+      <input value="Submit" type="submit" class="btn btn-light mt-2"></input>
+      </form>
+      <hr>
+      <br>
+      <h2>Submissions</h2>
+      <p>All artwork and articles on this site are by kids. If you have any kid-made artwork or articles please email it to us at <a href="mailto:submissions@covidkidsonline.com" class="text-dark">submissions@covidkidsonline.com</a></p>
+      <br>
+      <hr>
+      <br>
+      <h2>Anything Else</h2>
+      <p>If your message does not fit into one of the above catagories please email us at <a href="mailto:info@covidkidsonline.com" class="text-dark">info@covidkidsonline.com</a></p>
+      <br>
+      <hr>
+    </center>
 
-      <script src="assets/js/main.js"></script>
+    <script>
+      function validatefeedback() {
+        let inputText = document.forms["feedbackform"]["message"].value;
+        if (inputText != "") {
+          alert("Thank You For Contacting Us.");
+          return true;
+        }
+        else {
+          alert("Please Write Something Before Submitting.");
+          return false;
+        }
+      } 
+    </script>
   </body>
 </html>
