@@ -126,7 +126,7 @@ function populateArticles(type)
             ind = findIndex(likesListOrganized[z], likesList);
             if (starredArticles.includes("article" + ind)) code = "&#9733;";
             else code = "&#9734;";
-            var div = "<div style='display: inline-block;'>" + "<img src='" + articles[ind].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + ind + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[ind].description + "    <a class='text-light unselectable' id='article" + ind + "' onclick='starArticleAlt(" + ind + ");'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[ind].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
+            var div = "<div style='display: inline-block;'>" + "<img src='/assets/articles/" + articles[ind].image + "' height='120px' class='ml-2' style='float: left;' alt='img" + ind + "'>" + "<div class='mr-2 mb-4' style='display: block;'>" + "<p class='fontchange'>" + articles[ind].description + "    <a class='text-light unselectable' id='article" + ind + "' onclick='starArticleAlt(" + ind + ");'>" + code + "</a>" + "</p>" + "<a target='_blank' href='" + articles[ind].link + "' class='title2 articlereadmore'>Read More</a>" + "</div>" + "</div>";
             var addTo = document.getElementById("articles");
             var newContent = document.createElement('div');
             newContent.className = "card bg-dark pt-2 mt-3 mb-2 rounded mx-auto text-light";
