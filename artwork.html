@@ -1,8 +1,8 @@
 <html lang="en">
   <head>
         <title>Inspiring Artwork Made By Kids</title>
-        <script type="text/javascript" src="assets/includes/head.js"></script> 
-        <meta name="url" content="https://covidkidsonline.com/artwork.html"> 
+        <script type="text/javascript" src="assets/includes/head.js"></script>
+        <meta name="url" content="https://covidkidsonline.com/artwork.html">
         <meta name="owner" content="Ilan">
         <meta name="designer" content="Ilan">
         <meta name="subject" content="a hub for kids stuck at home, Activities For Kids Stuck At Home, Things to do while stuck at home, activities for kids in home, kid activities at home, fun activities, fun things to do for kids at home, activities for kids to do">
@@ -31,9 +31,9 @@
 
             </div>
         </div>
-        
+
         <div id="modals">
-      
+
         </div>
 
         <script src="assets/js/main.js"></script>
@@ -43,7 +43,7 @@
                 window.addEventListener('load', () => {
                     navigator.serviceWorker.register('/sw.js')
                         .then(reg => {
-                            console.log('Regestered!', reg);
+                            console.log('Registered!', reg);
                         }).catch(err => {
                             console.log('Registration Failed: ', err);
                         });
@@ -63,14 +63,14 @@
                     newContent.id = x1;
                     newContent.innerHTML = div;
                     addTo.appendChild(newContent);
-                    
+
                     let images = [];
                     for (let x2 in artwork[x1].files) {
                         images.push(`<img src="${artwork[x1].files[x2]}" width="90%;" alt="img${x2}">`)
                     }
-                    
+
                     let modalele = `<div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title' id='model${x1}Label'>Artwork By ${artwork[x1].by}</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>x</span></button></div><div class='modal-body'><center>${images.toString()}</center></div><div class='modal-footer'><button type='button' class='btn btn-dark' data-dismiss='modal'>Close</button></div></div></div></div>`;
-                    
+
                     let addToModal = document.getElementById("modals");
                     let newContentModal = document.createElement("div");
                     newContentModal.className = "modal fade";

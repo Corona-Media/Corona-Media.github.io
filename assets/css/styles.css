@@ -550,6 +550,7 @@ a.text-dark:hover {
 
 .text-light {
     color: #f8f9fa !important;
+    cursor:pointer;
 }
 
 .row {
@@ -790,8 +791,8 @@ h2{
     font-family: customFont;
 }
 
-p{ 
-    margin: 0 !important; 
+p{
+    margin: 0 !important;
 }
 
 h3{
@@ -1206,9 +1207,9 @@ h6 {
 }
 
 .linkfontsize{
-    position: absolute;                  
-    bottom: 7px; 
-    left: 10%; 
+    position: absolute;
+    bottom: 7px;
+    left: 10%;
     right: 10%;
 }
 
