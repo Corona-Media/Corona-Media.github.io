@@ -79,7 +79,7 @@ const articles = [{
     image: "dc.jpeg",
     description: "Hawthorne Summer Camp Is 3D Printing Face Shields For Frontline Workers",
     link: "assets/articles/discover-camp.html"
-},
+    },
     {
         image: "book-list.jpg",
         description: "20+ Great Books For Kids To Read While Stuck At Home",
@@ -114,6 +114,11 @@ const articles = [{
         image: "playdate.jpeg",
         description: "Is it safe for kids to have playdates?",
         link: "assets/articles/playdates-safe.html"
+    },
+    {
+        image: "photo-schedule.png",
+        description: "New Covid Kids Photo Schedule/Planner",
+        link: "assets/articles/photo-schedule.html"
     }
 ];
 
