@@ -1,8 +1,8 @@
 <html lang="en">
   <head>
     <title>A Collection Of Fun Videos For Kids</title>
-    <script type="text/javascript" src="assets/includes/head.js"></script>  
-    <meta name="url" content="https://covidkidsonline.com/videos.html"> 
+    <script type="text/javascript" src="assets/includes/head.js"></script>
+    <meta name="url" content="https://covidkidsonline.com/videos.html">
     <meta name="owner" content="Ilan">
     <meta name="designer" content="Ilan">
     <meta name="subject" content="a hub for kids stuck at home, Activities For Kids Stuck At Home, Things to do while stuck at home, activities for kids in home, kid activities at home, fun activities, fun things to do for kids at home, activities for kids to do, fun videos for kids">
@@ -29,17 +29,17 @@
     <br>
     <div class="container-fluid text-center">
         <div class="row mar" id="vids">
-         
+
         </div>
     </div>
-      
+
     <script src="assets/js/main.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/sw.js')
                 .then(reg => {
-                    console.log('Regestered!', reg);
+                    console.log('Registered!', reg);
                 }).catch(err => {
                     console.log('Registration Failed: ', err);
                 });
