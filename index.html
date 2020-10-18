@@ -54,7 +54,7 @@
                     <a id="link" target="_blank" class="title2"></a>
                 </center>
             </div>
-            
+
             <div class="card bg-dark mr-3 ml-3 mt-4 pt-2 mb-3 rounded div mx-auto" style="width: 600px; height: 400px;">
                 <center>
                     <h2 class="text-light mb-4">About</h2>
@@ -72,7 +72,7 @@
                     <p class="text-center mt-2"><a href="videos.html" class="title2">Watch More</a></p>
                 </center>
             </div>
-          
+
             <div class="card bg-dark mr-3 ml-3 pt-2 mt-4 mb-3 rounded div mx-auto" style="width: 600px; height: 400px;">
                     <h2 class="text-light text-center">Recent Articles</h2>
                     <br>
@@ -82,7 +82,7 @@
                     <br>
                     <a class="title2 text-center linkfontsize" href="articles.html">More</a>
             </div>
-            
+
             <div class="card bg-dark mr-3 ml-3 mt-4 pt-2 mb-3 rounded div mx-auto" style="width: 600px; height: 400px;">
                 <center>
                     <h2 class="text-light mb-3">Kids Artwork</h2>
@@ -135,9 +135,11 @@
         };
 
         $.ajax(settings).done((response) => {
-            $("#total").text(response.TotalRecovered + " People Have Recovered From Covid-19.");
+            $("#total")<!-- Codes by HTMLcodes.ws -->
+<p style="color:LimeGreen">
+.text(response.TotalRecovered + " People Have Recovered From Covid-19.");
         });
-
+</p>
         if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/sw.js')
