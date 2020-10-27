@@ -3,6 +3,7 @@
     <title>Covid Kids - Activities For Kids Stuck At Home</title>
     <script type="text/javascript" src="assets/includes/head.js"></script>
     <link rel="canonical" href="index.html">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <meta name="url" content="https://covidkidsonline.com/index.html">
     <meta name="owner" content="Ilan">
     <meta name="designer" content="Ilan">
@@ -34,49 +35,54 @@
     <div class="container-fluid">
         <div class="row mt-4 mar">
             <div class="card bg-dark pt-2 rounded mx-auto mt-4 mb-3"  style="width: 600px; height: 400px;">
-                <center>
-                    <h2 class="text-light">Featured Funny Video</h2>
+                <div class="goto">Go To <img src="assets/icons/right-arrow.svg" alt=""></div>
+                <span class="text-center">
+                    <h2 class="text-dark">Featured Funny Video</h2>
                     <iframe title="funny video" id="funnyvid" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"></iframe>
                     <p class="text-center mt-2"><a href="videos.html" class="title2">Watch More</a></p>
-                </center>
+                </span>
             </div>
 
             <div class="card bg-dark mr-3 ml-3 pt-2 mt-4 mb-3 rounded div mx-auto" style="width: 600px; height: 400px;">
-                <center>
-                    <h2 class="text-light">Fun Activities</h2>
+                <div class="goto">Go To <img src="assets/icons/right-arrow.svg" alt=""></div>
+                <span class="text-center">
+                    <h2 class="text-dark">Fun Activities</h2>
                     <div class="p-3 mb-3" style="width: 90%; height: 300px;" onclick="ideasfunc()">
-                        <h6 class="text-light">Click To Generate A Random Activity!</h6>
+                        <h6 class="text-dark">Click To Generate A Random Activity!</h6>
                         <br>
-                        <h3 class="text-center text-light mt-5" id="text"></h3>
+                        <h3 class="text-center text-dark mt-5" id="text"></h3>
                         <br>
                         <br>
                     </div>
                     <a id="link" target="_blank" class="title2"></a>
-                </center>
+                </span>
             </div>
             
             <div class="card bg-dark mr-3 ml-3 mt-4 pt-2 mb-3 rounded div mx-auto" style="width: 600px; height: 400px;">
-                <center>
-                    <h2 class="text-light mb-4">About</h2>
-                    <h6 id="total" class="text-light ml-2 mr-2"></h6>
+                <div class="goto">Go To <img src="assets/icons/right-arrow.svg" alt=""></div>
+                <span class="text-center">
+                    <h2 class="text-dark mb-4">About</h2>
+                    <h6 id="total" class="text-dark ml-2 mr-2"></h6>
                     <br>
-                    <p class="text-light mr-3 ml-3 fontsize">Covid Kids is a resource for parents of kids stuck at home. We hope to keep the bordom at bay by providing fun videos and activities to keep your kids entertained. All articles and artwork are made by kids. If you want your writing or artwork on the site email <a href="mailto:info@covidkidsonline.com" class="text-light">info@covidkidsonline.com</a>. If you have any feedback or suggestions for the site head over to the <a href="feedback.html" class="text-light">feedback page</a>.</p>
+                    <p class="text-dark mr-3 ml-3 fontsize">Covid Kids is a resource for parents of kids stuck at home. We hope to keep the bordom at bay by providing fun videos and activities to keep your kids entertained. All articles and artwork are made by kids. If you want your writing or artwork on the site email <a href="mailto:info@covidkidsonline.com" class="text-dark">info@covidkidsonline.com</a>. If you have any feedback or suggestions for the site head over to the <a href="feedback.html" class="text-dark">feedback page</a>.</p>
                     <a href="https://coronavirus.jhu.edu/" target="_blank" class="title2 linkfontsize">Click Here For More Info About COVID-19</a>
-                </center>
+                </span>
             </div>
 
             <div class="card bg-dark pt-2 rounded mx-auto mt-4 mb-3"  style="width: 600px; height: 400px;">
-                <center>
-                    <h2 class="text-light">Featured Happy Video</h2>
+                <div class="goto">Go To <img src="assets/icons/right-arrow.svg" alt=""></div>
+                <span class="text-center">
+                    <h2 class="text-dark">Featured Happy Video</h2>
                     <iframe title="happy video" id="happyvid" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
                     <p class="text-center mt-2"><a href="videos.html" class="title2">Watch More</a></p>
-                </center>
+                </span>
             </div>
           
             <div class="card bg-dark mr-3 ml-3 pt-2 mt-4 mb-3 rounded div mx-auto" style="width: 600px; height: 400px;">
-                    <h2 class="text-light text-center">Recent Articles</h2>
+                <div class="goto">Go To <img src="assets/icons/right-arrow.svg" alt=""></div>
+                    <h2 class="text-dark text-center">Recent Articles</h2>
                     <br>
-                    <ul class="text-light" id="articleslist">
+                    <ul class="text-dark" id="articleslist">
 
                     </ul>
                     <br>
@@ -84,19 +90,20 @@
             </div>
             
             <div class="card bg-dark mr-3 ml-3 mt-4 pt-2 mb-3 rounded div mx-auto" style="width: 600px; height: 400px;">
-                <center>
-                    <h2 class="text-light mb-3">Kids Artwork</h2>
+                <div class="goto">Go To <img src="assets/icons/right-arrow.svg" alt=""></div>
+                <span class="text-center">
+                    <h2 class="text-dark mb-3">Kids Artwork</h2>
                     <img src="assets/artwork/0/0.jpg" height="290" onclick="popupindex()" alt="mainartwork" class="mb-2">
                     <br>
                     <a class="title2" href="artwork.html">See More</a>
-                </center>
+                </span>
             </div>
         </div>
     </div>
 
-    <footer class="footer bg-dark p-3 mt-4">
-      <div class="container">
-        <center><span class="text-light">Version 1.4.9</span></center>
+    <footer class="footer  p-3 mt-4">
+      <div class="container text-center">
+        <span class="text-light">Version 1.4.9</span>
       </div>
     </footer>
 
@@ -110,14 +117,14 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <center>
+                    <span class="text-center">
                         <img src="assets/artwork/0/0.jpg" width="90%;" alt="artwork0">
                         <img src="assets/artwork/0/1.jpg" width="90%;" alt="artwork1">
                         <img src="assets/artwork/0/2.jpg" width="90%;" alt="artwork2">
                         <img src="assets/artwork/0/3.jpg" width="90%;" alt="artwork3">
                         <img src="assets/artwork/0/4.jpg" width="90%;" alt="artwork4">
                         <img src="assets/artwork/0/5.jpg" width="90%;" alt="artwork5">
-                    </center>
+                    </span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
