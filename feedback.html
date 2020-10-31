@@ -6,7 +6,7 @@
     <meta name='description' content='A site for kids, by kids, to help keep kids busy, informed, and content while stuck at home.'>
   </head>
 
-  <body>
+  <body style="margin-bottom: 10px;">
     <script type="text/javascript" src="assets/includes/header.js"></script>
     <br><br>
     <br><br>
@@ -20,19 +20,19 @@
       <textarea id="input" type="text" name="message" placeholder="Messsage" class="textarea"></textarea>
       <input value="Submit" type="submit" class="btn btn-light mt-2"></input>
       </form>
-      <hr>
-      <br>
-      <h2>Submissions</h2>
-      <p>All artwork and articles on this site are by kids. If you have any kid-made artwork or articles please email it to us at <a href="mailto:submissions@covidkidsonline.com" class="text-dark">submissions@covidkidsonline.com</a></p>
       <br>
       <hr>
-      <br>
-      <h2>Anything Else</h2>
-      <p>If your message does not fit into one of the above catagories please email us at <a href="mailto:info@covidkidsonline.com" class="text-dark">info@covidkidsonline.com</a></p>
-      <br>
-      <hr>
+      <div class="small-part" style="display: inline-block; width: 48%; border-right: 1px solid white; height: 200px; padding-top: 35px; padding-right: 20px;">
+        <h2>Submissions</h2>
+        <p>All artwork and articles on this site are by kids. If you have any kid-made artwork or articles please email it to us at <a href="mailto:submissions@covidkidsonline.com" class="text-dark">submissions@covidkidsonline.com</a></p>
+      </div>
+      <div class="small-part" style="display: inline-block; width: 48%; height: 200px; padding-top: 35px;">
+        <h2>Anything Else</h2>
+        <p>If your message does not fit into one of the above catagories please email us at <a href="mailto:info@covidkidsonline.com" class="text-dark">info@covidkidsonline.com</a></p>
+      </div>
     </center>
 
+    
     <script>
       function validatefeedback() {
         let inputText = document.forms["feedbackform"]["message"].value;
