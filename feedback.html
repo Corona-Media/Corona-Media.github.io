@@ -10,13 +10,16 @@
     <script type="text/javascript" src="assets/includes/header.js"></script>
     <br><br>
     <br><br>
+    
     <center>
+      <h1>Contact Us</h1>
       <hr>
       <br>
       <h2>Feedback</h2>
       <p class="ml-2 mr-2">Let us know here if you have any feedback for improvements to this website. you can also submit it by emailing us at <a href="mailto:feedback@covidkidsonline.com" class="text-dark">feedback@covidkidsonline.com</a></p>
       <br>
       <form name="feedbackform" onsubmit="return validatefeedback();" method="POST" action="https://ilan-not-elon.com/Covid-Kids/feedback.php">
+      <input id="name" type="text" placeholder="Your Full Name" class="textarea">
       <textarea id="input" type="text" name="message" placeholder="Messsage" class="textarea"></textarea>
       <input value="Submit" type="submit" class="btn btn-light mt-2"></input>
       </form>
@@ -35,7 +38,7 @@
 
     <script>
       function validatefeedback() {
-        let inputText = document.forms["feedbackform"]["message"].value;
+        let inputText = document.forms["feedbackform"]["name","message"].value;
         if (inputText != "") {
           alert("Thank You For Contacting Us.");
           return true;
