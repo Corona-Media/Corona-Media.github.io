@@ -9,6 +9,7 @@ const resourcesToPrecache = [
     '/assets/articles/online-course.html',
     '/assets/articles/planning-summer.html',
     '/assets/articles/playdates-safe.html',
+    '/assets/articles/photo-schedule.html',
     'https://api.covid19api.com/world/total',
     'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
     '/index.html',
@@ -24,6 +25,7 @@ const resourcesToPrecache = [
     '/assets/artwork/0/3.jpg',
     '/assets/artwork/0/4.jpg',
     '/assets/artwork/0/5.jpg',
+    '/assets/images/photo-schedule.png',
     '/assets/images/book-list.jpg',
     '/assets/images/camera.jpg',
     '/assets/images/corona.png',
@@ -40,6 +42,7 @@ const resourcesToPrecache = [
     '/assets/includes/head.js',
     '/assets/includes/static-article.head.js',
     '/assets/includes/header.js',
+    '/assets/includes/static-article-header.js',
     '/assets/fonts/BebasNeue-Bold.ttf',
     '/assets/css/styles.css'
 ];
