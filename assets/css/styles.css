@@ -197,6 +197,10 @@ input[type="submit"].btn-block {
     background-color: transparent;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .dropdown-menu.show {
     display: block;
 }

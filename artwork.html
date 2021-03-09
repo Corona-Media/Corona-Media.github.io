@@ -56,8 +56,8 @@
                 for (let x1 in artwork) {
                     let div = `<center><img id='img1' src='${artwork[x1].files[0]}' width='90%' data-toggle='tooltip' title='Artwork By ${artwork[x1].by}' alt='${artwork[x1].by}art'></center>`;
                     let addTo = document.getElementById("art");
-                    let newContent = document.createElement('div');
-                    newContent.className = "card bg-dark pt-2 mt-5 mb-3 mx-auto mobile";
+                    let newContent = document.createElement("div");
+                    newContent.className = "card bg-dark pt-2 mt-5 mb-3 mx-auto mobile cursor-pointer";
                     newContent.style = "width: 400px; height: 530px;";
                     newContent.setAttribute("onclick", "popup(this)");
                     newContent.id = x1;

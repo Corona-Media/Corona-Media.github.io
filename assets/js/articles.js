@@ -39,9 +39,16 @@ function setIcons()
 //called when article liked
 function likeArticle()
 {
-    if (likedArticles.includes("like" + articleid)) likedArticles.splice(likedArticles.indexOf(`like${articleid}`));
-    else likedArticles.push("like" + articleid);
-    newWebRequest("https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + "like" + articleid);
+    if (likedArticles.includes("like" + articleid))
+    {
+        likedArticles.splice(likedArticles.indexOf(`like${articleid}`));
+        newWebRequest("https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=unlikeArticle&article=" + "like" + articleid);
+    }
+    else
+    {
+        likedArticles.push("like" + articleid);
+        newWebRequest("https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=likeArticle&article=" + "like" + articleid);
+    }
     localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
     setIcons();
 }
