@@ -754,10 +754,18 @@ a:hover {
     color: cadetblue !important;
 }
 .title2{
+    position: absolute;
+    bottom: 5px;
     color: white;
 }
-
 .title2:hover{
+    color: cadetblue !important;
+}
+
+.title3 {
+    color: white;
+}
+.title3:hover{
     color: cadetblue !important;
 }
 

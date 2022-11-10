@@ -73,7 +73,7 @@ function starArticleAlt(articleid)
 }
 
 //loads articles on articles.html
-function populateArticles(type)
+async function populateArticles(type)
 {
     if (type == "default")
     {
@@ -116,14 +116,7 @@ function populateArticles(type)
         document.getElementById("articles").innerHTML = "";
         for (let x in articles)
         {
-            likes = "0";
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = () => {
-                if (this.readyState == 4 && this.status == 200) likes = this.responseText;
-            };
-            xmlhttp.open("GET", "https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=getLikes&article=like" + x, false);
-            xmlhttp.send();
-            if (likes == "" || likes == null) likes = "0";
+            let likes = await fetch('https://ilan-not-elon.com/Covid-Kids/handleLikes.php?requestType=getLikes&article=like' + x) || 0;
             likesList.push(likes);
         }
         var likesListOrganized = likesList.concat();
